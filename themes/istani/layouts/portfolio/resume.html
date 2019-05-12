@@ -1,0 +1,31 @@
+{{ define "main" }}
+<section id="portfolio" class="animated fadeIn grid-container">
+    <div class="cell">
+
+        {{ partial "portfolio/personalInformation.html" . }}
+        {{ partial "portfolio/socialMedia.html" . }}
+        {{ partial "portfolio/bio.html" . }}
+        {{ partial "portfolio/skills.html" . }}
+
+
+        {{ .Content }}
+    </div>
+</section>
+
+
+{{ with .Params.headerimage }}
+<style>
+    .cover
+    {
+        background: url('/img/headers/{{ . }}') center center no-repeat !important;
+        background-size: cover !important;
+    }
+</style>
+{{ end }}
+<script src="//portfolio.ke.vinpet.it/bower_components/jquery/dist/jquery.min.js"></script>
+<script src="//portfolio.ke.vinpet.it/bower_components/what-input/what-input.min.js"></script>
+<script src="//portfolio.ke.vinpet.it/bower_components/foundation-sites/dist/foundation.min.js"></script>
+<script src="//portfolio.ke.vinpet.it/bower_components/progressbar.js/dist/progressbar.min.js"></script>
+<script src="//portfolio.ke.vinpet.it/bower_components/waypoints/lib/noframework.waypoints.min.js"></script>
+<script src="//portfolio.ke.vinpet.it/js/app.min.js"></script>
+{{ end }}
