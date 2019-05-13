@@ -2,3 +2,32 @@ baseURL = "https://spellborn.org/"
 languageCode = "en-us"
 title = "The Chronicles of Spellborn Reborn"
 theme = "istani"
+
+[menu]
+
+  [[menu.main]]
+    identifier = "home"
+    name = "Home"
+    url = "/"
+    weight = 10
+
+  [[menu.main]]
+    identifier = "news"
+    name = "News"
+    url = "/news/"
+    weight = 20
+
+  [[menu.main]]
+    identifier = "forum"
+    name = "Forum"
+    url = "https://forum.spellborn.org"
+    weight = 30
+
+
+
+  [[menu.main]]
+  	identifier = "game1"
+	  parent = "The Game"
+	  name = "Download Lastest Client"
+	  url = "https://files.spellborn.org/latest.zip"
+	  weight = 10

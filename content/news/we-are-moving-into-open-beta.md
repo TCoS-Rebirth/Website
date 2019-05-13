@@ -23,23 +23,8 @@ Several bugs have been fixed, broken quests fixed and even closed content reopen
 </div>
 
 ## Enough talking, how can I get in?
-I like how impatient you are!
+I like how impatient you are! You can find all the required steps right here!  
+<a class="cta btn btn-primary btn-sm" href="/content/getting-started/">Getting Started</a>
 
-The steps are quite easy:
-
-1. Register on the forums - this is needed so you can report bugs or issues. If you already have an account, you can skip this step :)  
- <a class="button" data-open="registerForumAccount">Create forum account</a>
-2. Join the beta group on the forums - this way, we can notify you when there are updates.  
-<a class="button" data-open="joinBetaGroup">Join the Open beta group on the forums</a>
-3. Register a game account - for security reasons, don't use your **account name** as a character name.  
- <a class="button" data-open="registerGameAccount">Create game account</a>
-4. Download the client - you can always find the latest version on the homepage, or download it by using this button:  
- <a class="button" href="https://files.spellborn.org/latest.zip">Download latest version of Spellborn</a>
-5. Unzip the game on a place of you liking, run the bin\Client\Sb_client.exe file and enjoy the game!
-
-<div class="callout primary">A new downloader/patcher is currently being worked on.</div>
-
-Do you have any further questions, or remarks? Make sure you'll let us know on the forums or on our Discord (https://discord.gg/M8u7AsG)
-
-- The Spellborn Reborn Team.
+*The Spellborn Reborn Team.*
 
