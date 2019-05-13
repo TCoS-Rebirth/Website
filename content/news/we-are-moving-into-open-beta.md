@@ -5,10 +5,10 @@ draft: false
 summary: "Set foot in Hawksmouth once more!"
 tags: [ "open beta", "beta", "getting started" ]
 description: "We have a few more slots on Shardship The Mercantile!"
+leadtext: "The moment many of you have waited for has finally arrived - we are opening up the game to everybody!"
 headerimage: "openbeta.jpg"
+author: "kev.in"
 ---
-
-**Hello everybody! The moment I think a lot of you waited for, has finally come - we are opening up the gates to the game to everybody!**
 
 What started a few months ago as a stroke of pure luck, allowing us to get back on the game, has evolved to a point that we are comfortable opening it up to others - which means, we don't expect to do any further character wipes, but as long as the beta runs, that chance might still be there.
 
@@ -16,8 +16,10 @@ The game itself is the latest version of The Chronicles of Spellborn that was av
 
 Several bugs have been fixed, broken quests fixed and even closed content reopened, which makes this, without doubt, the best version of The Chronicles of Spellborn that has ever been available.
 
-<div class="responsive-embed widescreen">
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/ftseyuky0co" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="text-center"></iframe>
+<div class="media-content">
+	<div class="embed-responsive embed-responsive-16by9">
+		<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/ftseyuky0co" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	</div>
 </div>
 
 ## Enough talking, how can I get in?
@@ -41,12 +43,3 @@ Do you have any further questions, or remarks? Make sure you'll let us know on t
 
 - The Spellborn Reborn Team.
 
-<div class="large reveal" id="registerForumAccount" data-reveal>
-    <iframe src="https://forum.spellborn.org/member.php?action=register" style="border:0px #ffffff none;" name="register" scrolling="yes" frameborder="0" marginheight="0px" marginwidth="0px" height="750px" width="100%" allowfullscreen></iframe>
-</div>
-<div class="large reveal" id="joinBetaGroup" data-reveal>
-    <iframe src="https://forum.spellborn.org/usercp.php?action=usergroups" style="border:0px #ffffff none;" name="register" scrolling="yes" frameborder="0" marginheight="0px" marginwidth="0px" height="750px" width="100%" allowfullscreen></iframe>
-</div>
-<div class="large reveal" id="registerGameAccount" data-reveal>
-    <iframe src="https://www.spellborn.nl" style="border:0px #ffffff none;" name="register" scrolling="no" frameborder="0" marginheight="0px" marginwidth="0px" height="750px" width="100%" allowfullscreen></iframe>
-</div>

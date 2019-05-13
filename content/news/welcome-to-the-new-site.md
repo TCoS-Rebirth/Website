@@ -6,6 +6,7 @@ summary: "The first steps have been set."
 tags: [ "welcome", "website" ]
 description: "We have just launched the new website!"
 headerimage: "ringfell.jpg"
+author: "kev.in"
 ---
 
 **Hi.**

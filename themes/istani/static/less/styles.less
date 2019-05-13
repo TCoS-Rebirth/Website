@@ -26,12 +26,14 @@ body.y{
 }
 
 #hero{
+  margin-bottom: 45px;
   position: relative;
-  background-image: url(/img/hero/hero3.jpg);
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
-  height: 100vh;
+  .main-row{
+    min-height: 50vh;
+  }
 
   &:before{
     content: " ";
@@ -47,38 +49,60 @@ body.y{
     margin: 30vh 0 5vh;
   }
 
-  .slogan{
+  .hero-text{
     color: #fff;
     text-shadow: 1px 1px 1px #000;
 
-    &.slogan-top,
-    &.slogan-bottom{
+    h1,
+    .slogan-top,
+    .slogan-bottom{
       text-transform: uppercase;
       font-family: 'Merriweather', serif;
     }
 
-    &.slogan-top{
+    .slogan-top{
       font-size: 24px;
       line-height: 1.2;
       margin-bottom: 15px
     }
 
-    &.slogan-bottom{
+    .slogan-bottom{
       font-size: 64px;
       line-height: 0.7;
       margin-bottom: 30px
     }
 
-    &.subslogan{
+    .lead,
+    .subslogan{
       font-size: 20px;
       line-height: 1.8;
       margin-bottom: 45px
     }
+
+    .info{
+      font-size: 14px;
+    }
   }
 
-  a{
+  a.cta{
     margin: 0 10px;
   }
+
+  .article-tags{
+    margin-top: 15px;
+  }
+
+}
+
+#hero.front{
+  background-image: url(/img/hero/hero3.jpg);
+  height: 100vh;
+  margin-bottom: 0px;
+}
+
+
+.media-content{
+  margin: 45px -30px;
 }
 
 #main-footer{
@@ -116,14 +140,13 @@ a{
 }
 
 
-
-
-
-
-
-.btn-warning{
+.btn-primary{
   background-color: @primary-color !important;
   border-color: @primary-color-dark;
+}
+
+.badge-primary{
+  background-color: @primary-color !important;
 }
 
 .homepage-block{
@@ -358,4 +381,46 @@ html.sr .reveal,
 .newspost .author{
     color: #00E676;
     font-weight: 600;
+}
+
+
+ul,ol {
+  list-style: none;
+  padding: 0;
+}
+ol{
+  counter-reset: counter;
+}
+
+ul li {
+  padding-left: 1.5em;
+}
+li:before {
+  content: "\f00c";
+  font-family: FontAwesome;
+  display: inline-block;
+  color: @primary-color;
+}
+
+ul li:before {
+  content: "\f111";
+  margin-left: -1.5em;
+  width: 1.5em;
+  font-size: 14px;
+}
+
+ul li li:before {
+  content: "\f192";
+}
+
+ol li {
+  counter-increment: counter;
+  padding-left: 1.3em;
+}
+ol li:before {
+  content: counter(counter) ". ";
+  font-size: 18px;
+  font-weight: bold;
+  margin-left: -1.3em;
+  width: 1.3em;
 }

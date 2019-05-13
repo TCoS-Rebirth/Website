@@ -1,60 +1,35 @@
 
 {{ define "main" }}
-<section id="blogpost" class="animated fadeIn grid-container">
-    <div class="cell">
-        <h1 id="title">{{ .Title }}</h1>
-        <div>
-            <article id="content">
-                {{ .Content }}
-            </article>
-        </div>
-    </div>
-</section>
-<section class="metaSinglePost grid-container">
-    <div class="cell grid-margin-x">
-        <div>
-            <section class="grid-container">
-                <div class="grid-x">
-                    <p class="auto cell" id="date"> Posted on <strong>{{ .Date.Format "Monday, 2 January 2006" }}</strong> </p>
-                    <!--Minimalism, not needed. But cool. Preserving. <p class="small-1 right cell" id="wordcount"> {{ .WordCount }} words </p>-->
-                    {{ with .Params.tags }}
-                    <div class="auto cell">
-                        <ul id="tags" class="no-bullet inline">
-                            {{ range . }}
-                            <li> <span class="secondary label"><a href="{{ "tags" | absURL }}/{{ . | urlize }}">{{ . }}</span></a> </li>
-                            {{ end }}
-                        </ul>
+<article id="content" class="newspost">
+    <header id="hero" style="background-image:url('/img/headers/{{ .Params.headerimage }}')">
+        <div class="container">
+            <div class="row main-row align-items-center">
+                <div class="col-sm-12 text-center">
+                    <div class="hero-text">
+                        <h1 id="title">{{ .Title }}</h1>
+                        <p class="subslogan">{{ .Params.leadtext }}</p>
+                        <div class="info">
+                          <span class="timestamp">{{ .Date.Format "2 Jan 2006" }}</span> by <span class="author">{{.Params.author}}</span>
+                        </div>
                     </div>
-                    {{ end }}
+                    <div class="article-tags">
+                        {{ with .Params.tags }}
+                            {{ range . }}
+                            <a href="{{ "tags" | absURL }}/{{ . | urlize }}"><span class="badge badge-primary">{{ . }}</span></a>
+                            {{ end }}
+                        {{ end }}
+                    </div>
                 </div>
-            </section>
-            {{ with .Params.topics }}
-            <ul id="topics">
-                {{ range . }}
-                <li><a href="{{ "topics" | absURL}}{{ . | urlize }}">{{ . }}</a> </li>
-                {{ end }}
-            </ul>
-            {{ end }}
-
+            </div>
         </div>
-<!--        <div>-->
-<!--            {{ with .PrevInSection }}-->
-<!--            <a class="previous" href="{{.Permalink}}"> {{.Title}}</a>-->
-<!--            {{ end }}-->
-<!--            {{ with .NextInSection }}-->
-<!--            <a class="next" href="{{.Permalink}}"> {{.Title}}</a>-->
-<!--            {{ end }}-->
-<!--        </div>-->
-    </div>
-</section>
-
-{{ with .Params.headerimage }}
-    <style>
-        BODY
-        {
-            background: url('/img/headers/{{ . }}') center / cover no-repeat fixed !important;
-        }
-    </style>
-{{ end }}
+    </header>
+    <section class="container">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                {{ .Content }}
+            </div>
+        </div>
+    </section>
+</article>
 
 {{ end }}
