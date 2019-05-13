@@ -25,14 +25,63 @@
     <section class="container-fluid homepage-block homepage-block-{{.Params.order}} block-text-position-{{.Params.textpos}}" style="background-image: url('/img/home/{{ .Params.bgimage }}')">
         <div class="container">
             <div class="row main-row align-items-center">
-                <div class="col-md-6 reveal">
+                <div class="col-md-6 text-col reveal">
                     {{ .Content }}
                 </div>
             </div>
         </div>
     </section>
-    
+
 {{ end }}
+
+<section id="news" class="container-fluid homepage-block homepage-block-3">
+    <div class="container">
+      <div class="row main-row">
+        <div class="col-12 reveal">
+          <h2 class="block-title">Recent news</h2>
+          <div class="row equal">
+            {{ range first 3 (where .Data.Pages "Section" "news").ByDate.Reverse }}
+                <article class="col col-md-4 newspost teaser">
+                  <div class="inner d-flex h-100 flex-column">
+                    <div class="info">
+                      <span class="timestamp">1 April 2019</span> by <span class="author">Admin</span>
+                    </div>
+                    <a href="{{.Permalink}}"><img class="img-fluid" src="/img/news/{{ .Params.headerimage }}" /></a>
+                    <div class="content flex-fill flex-column d-flex justify-content-start">
+                      <a href="{{.Permalink}}" class="no-line"><h3>{{.Title}}</h3></a>
+                      <p>{{.Description}}</p>
+                      <a href="{{.Permalink}}">Read More</a>
+                    </div>
+                  </div>
+                </article>
+            {{ end }}
+          </div>
+        </div>
+    </div>
+    </div>
+</section>
+
+<section id="news">
+    <div class="grid-container">
+        <div class="grid-x grid-padding-x">
+        {{ range first 4 (where .Data.Pages "Section" "news").ByDate.Reverse }}
+            <div class="small-12 medium-6 large-3 cell news-card">
+                <a href="{{.Permalink}}">
+                    <div class="card">
+                        <div class="card-divider">
+                            {{.Title}}
+                        </div>
+                        <div class="articleListImg" style="background: url('/img/headers/{{ .Params.headerimage }}') center center no-repeat !important; background-size: cover !important; }"></div>
+                        <div class="card-section">
+                            <p>{{.Description}}</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        {{ end }}
+        </div>
+    </div>
+</section>
 
 {{ end }}
 
