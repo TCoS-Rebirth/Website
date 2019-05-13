@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather');
+
+#hero{
+  position: relative;
+  background-image: url(../img/hero3.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+#hero:before{
+  content: " ";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(34, 34, 34, 0.5);
+}
+
+
+.logo{
+  margin: 30vh 0 5vh;
+}
+
+.slogan{
+  color: #fff;
+  text-shadow: 1px 1px 1px #000;
+}
+
+.slogan-top,
+.slogan-bottom{
+  text-transform: uppercase;
+  font-family: 'Merriweather', serif;
+}
+
+.slogan-top{
+  font-size: 24px;
+  line-height: 1.2;
+  margin-bottom: 15px
+}
+
+.slogan-bottom{
+  font-size: 64px;
+  line-height: 0.7;
+  margin-bottom: 30px
+}
+
+.subslogan{
+  font-size: 20px;
+  line-height: 1.8;
+  margin-bottom: 45px
+}
+
+.btn-warning{
+  background-color: #00E676 !important;
+  border-color: #00C853;
+}
+
+a{
+  color: #00E676;
+}
+a:hover{
+  color: #00C853;
+}
+
+.homepage-block{
+  /*padding: 120px 0;*/
+  /*background-color: #212121;*/
+}
+
+.homepage-block .row.main-row{
+  min-height: 66vh;
+  padding: 45px 0;
+}
+
+.block-title{
+  font-family: 'Merriweather', serif;
+  text-transform: uppercase;
+  color: #00E676;
+}
+
+.homepage-block-1{
+  background-image: url(../img/spell-1.jpg);
+  background-size: cover;
+  background-position: center;
+  color: #F5F5F5;
+}
+
+.homepage-block-2{
+  background-image: url(../img/spell-2.jpg);
+  background-size: cover;
+  background-position: center;
+  color: #F5F5F5;
+}
+
+.homepage-block-3{
+  background-color: #f9f9f9;
+  /*background-color: #343a40;*/
+}
+
+.fixed-top.scrolled {
+  /*background-color: #fff !important;*/
+  transition: background-color 200ms linear;
+}
+
+.btn, .form-control, .panel, .nav-tabs > li > a,
+.pagination-sm > li:first-child > a, .pagination-sm > li:first-child > span,
+.pagination > li:first-child > a, .pagination > li:first-child > span,
+.pagination-sm > li:last-child > a, .pagination-sm > li:last-child > span,
+.pagination > li:last-child > a, .pagination > li:last-child > span{
+    border-radius: 0px !important;
+}
+
+html.sr .reveal,
+{
+  visibility: hidden;
+}
+
+.newspost.teaser{
+
+}
+
+.newspost.teaser{
+  margin-bottom: 30px;
+}
+
+.newspost.teaser > .inner{
+    background: white;
+    position: relative;
+}
+
+.newspost.teaser > .inner .info{
+  position: absolute;
+  background: rgba(0,0,0,0.5);
+  color: white;
+  top: 0;
+  left: 0;
+  padding: 5px 15px;
+}
+
+.newspost.teaser > .inner > .content{
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-top: none;
+}
+
+.newspost.teaser > .inner > .content h3{
+  margin-top: 0;
+  font-weight: 600;
+}
+
+
+.newspost.teaser > .inner > .content p{
+  font-size: 16px;
+}
+
+.newspost .author{
+    color: #00E676;
+    font-weight: 600;
+}

@@ -1,0 +1,26 @@
+{{ define "main" }}
+    <div class="grid-container">
+        <section id="listing" class="hide-for-small-only">
+            <section id="introduction">
+                <h1>{{.Title}}</h1>
+                <p>{{.Content}}</p>
+            </section>
+        </section>
+
+            {{ range .Data.Pages }}
+                <article class="grid-container grid-margin-x">
+                    <!-- Ranges through content/post/*.md -->
+                    <div class="articleListImg" style="background: url('/img/headers/{{ .Params.headerimage }}') center center no-repeat !important; background-size: cover !important; }">
+                        <div class="grid-x">
+                            <div class="small-9 colums">
+                                <h1><a href="{{.Permalink}}">{{.Title}}</a></h1>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="listingSummary">{{.Summary}}</p>
+                </article>
+            {{ end }}
+
+    </div>
+
+{{ end }}
