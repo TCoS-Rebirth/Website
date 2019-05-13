@@ -1,7 +1,7 @@
 ---
 title: "About the game"
 draft: false
-bgimage: "openbeta.jpg"
+bgimage: "block-1.jpg"
 textpos: "left"
 order: "1"
 ---

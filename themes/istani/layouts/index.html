@@ -1,9 +1,7 @@
 
 {{ define "main" }}
 
-{{ range (where .Data.Pages "Section" "home") }}
-    {{ .Content }}
-{{ end }}
+
 
 <section id="hero" class="container-fluid">
   <div class="container">
@@ -23,7 +21,18 @@
   </div>
 </section>
 
-
+{{ range (where .Data.Pages "Section" "home") }}
+    <section class="container-fluid homepage-block homepage-block-{{.Params.order}} block-text-position-{{.Params.textpos}}" style="background-image: url('/img/home/{{ .Params.bgimage }}')">
+        <div class="container">
+            <div class="row main-row align-items-center">
+                <div class="col-md-6 reveal">
+                    {{ .Content }}
+                </div>
+            </div>
+        </div>
+    </section>
+    
+{{ end }}
 
 {{ end }}
 
