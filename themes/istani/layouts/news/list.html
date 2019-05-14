@@ -6,8 +6,8 @@
             <div class="row main-row align-items-center">
                 <div class="col-sm-12 text-center">
                     <div class="hero-text">
-                        <h1 id="title">Tag: {{ .Title }}</h1>
-                        <p class="subslogan">An overview of all content tagged with {{ .Title }}</p>
+                        <h1 id="title">{{ .Title }}</h1>
+                        <p class="subslogan">An overview of all {{ .Title }} items</p>
                     </div>
                 </div>
             </div>
@@ -19,6 +19,10 @@
             {{ range .Data.Pages }}
                 <article class="col-md-4 newspost teaser">
                   <div class="inner d-flex h-100 flex-column">
+                    <div class="info">
+                      <span class="timestamp">{{ time .Params.date | dateFormat "2 Jan 2006" }}</span> by <span class="author">{{.Params.author}}</span>
+                    </div>
+                    <a href="{{.Permalink}}"><img class="img-fluid" src="/img/news/{{ .Params.headerimage }}" /></a>
                     <div class="content flex-fill flex-column d-flex justify-content-start">
                       <a href="{{.Permalink}}" class="no-line"><h3>{{.Title}}</h3></a>
                       <p>{{.Description}}</p>

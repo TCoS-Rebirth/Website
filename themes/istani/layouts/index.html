@@ -6,7 +6,7 @@
 <section id="hero" class="container-fluid front">
   <div class="container">
     <div class="row">
-        <div class="col-4 offset-4">
+        <div class="col-md-4 offset-md-4">
             <img class="img-fluid logo" src="img/logo_spellborn.png" id="avatar" alt="The Chronicles of Spellborn - Reborn!">
         </div>
     </div>
@@ -24,7 +24,7 @@
 </section>
 
 {{ range (where .Data.Pages "Section" "home") }}
-    <section class="container-fluid homepage-block homepage-block-{{.Params.order}} block-text-position-{{.Params.textpos}}" style="background-image: url('/img/home/{{ .Params.bgimage }}')">
+    <section class="container-fluid homepage-block homepage-block-{{.Params.order}} block-text-position-{{.Params.textpos}} block-text-color-{{.Params.textcolor}}" style="background-image: url('/img/home/{{ .Params.bgimage }}')">
         <div class="container">
             <div class="row main-row align-items-center">
                 <div class="col-md-6 text-col reveal">
@@ -43,7 +43,7 @@
           <h2 class="block-title">Recent news</h2>
           <div class="row equal">
             {{ range first 3 (where .Data.Pages "Section" "news").ByDate.Reverse }}
-                <article class="col col-md-4 newspost teaser">
+                <article class="col-md-4 newspost teaser">
                   <div class="inner d-flex h-100 flex-column">
                     <div class="info">
                       <span class="timestamp">{{ time .Params.date | dateFormat "2 Jan 2006" }}</span> by <span class="author">{{.Params.author}}</span>
