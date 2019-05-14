@@ -3,6 +3,7 @@ title: "Spellborn Reborn"
 draft: false
 bgimage: "block-2.jpg"
 textpos: "right"
+textcolor: "light"
 order: "2"
 ---
 

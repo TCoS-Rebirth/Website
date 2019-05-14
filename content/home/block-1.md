@@ -3,6 +3,7 @@ title: "About the game"
 draft: false
 bgimage: "block-1.jpg"
 textpos: "left"
+textcolor: "light"
 order: "1"
 ---
 

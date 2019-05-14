@@ -10,21 +10,36 @@ headerimage: "openbeta.jpg"
 author: "kev.in"
 ---
 
-Some text here
+{{% content-text %}}
+  <h2>Test Title</h2>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus in dapibus risus, sit amet pellentesque odio. Nulla pretium euismod semper. Mauris condimentum finibus orci at feugiat. Vivamus porttitor tortor sed fringilla venenatis. Aliquam erat volutpat.</p>
+  <p>Etiam purus nisl, vestibulum vel dolor quis, convallis consequat massa. Morbi faucibus, neque et viverra mollis, diam dolor fermentum lorem, a fringilla sem velit sed quam. Duis tristique elit est, sed faucibus ante aliquet eu.</p>
+{{% /content-text %}}
 
-<div class="media-content">
-	<div class="embed-responsive embed-responsive-16by9">
-		<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/ftseyuky0co" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-	</div>
-</div>
 
-<div class="media-content">
-	<img class="img-fluid" src="/img/file.jpg" />
-</div>
+{{% content-text-with-image img="RuneMage.jpg" position="first" col="6" %}}
 
-## Heading 2
+  <h2>Test Title</h2>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus in dapibus risus, sit amet pellentesque odio. Nulla pretium euismod semper. Mauris condimentum finibus orci at feugiat. Vivamus porttitor tortor sed fringilla venenatis. Aliquam erat volutpat.</p>
+  <p>Etiam purus nisl, vestibulum vel dolor quis, convallis consequat massa. Morbi faucibus, neque et viverra mollis, diam dolor fermentum lorem, a fringilla sem velit sed quam. Duis tristique elit est, sed faucibus ante aliquet eu.</p>
 
-Some more text here
+{{% /content-text-with-image %}}
 
-*The Spellborn Reborn Team.*
+{{% content-text-with-image img="RuneMage.jpg" position="last" col="4" %}}
+
+  <h2>Test Title</h2>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus in dapibus risus, sit amet pellentesque odio. Nulla pretium euismod semper. Mauris condimentum finibus orci at feugiat. Vivamus porttitor tortor sed fringilla venenatis. Aliquam erat volutpat.</p>
+  <p>Etiam purus nisl, vestibulum vel dolor quis, convallis consequat massa. Morbi faucibus, neque et viverra mollis, diam dolor fermentum lorem, a fringilla sem velit sed quam. Duis tristique elit est, sed faucibus ante aliquet eu.</p>
+
+{{% /content-text-with-image %}}
+
+
+{{% content-media %}}
+  {{< youtube ftseyuky0co >}}
+{{% /content-media %}}
+
+
+{{% content-text %}}
+  <p><i>The Spellborn Reborn Team.</i></p>
+{{% /content-text %}}
 

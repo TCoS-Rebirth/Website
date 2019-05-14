@@ -48,13 +48,12 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
     <script>
-        $(function () {
-          $(document).scroll(function () {
-            var $nav = $(".fixed-top");
-            $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
-            $nav.toggleClass('bg-dark', $(this).scrollTop() > $nav.height());
-          });
-        });
+
+      $('.hero-text').waypoint(function() {
+          $('.navbar').toggleClass('scrolled');
+      }, {
+          
+      });
     </script>
     <script>
       ScrollReveal().reveal('.reveal', {
