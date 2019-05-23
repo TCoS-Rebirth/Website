@@ -7,7 +7,7 @@ tags: [ "open beta", "beta", "getting started" ]
 description: "We have a few more slots on Shardship The Mercantile!"
 leadtext: "The moment many of you have waited for has finally arrived - we are opening up the game to everybody!"
 headerimage: "openbeta.jpg"
-author: "kev.in"
+author: "Kevin"
 ---
 
 {{% content-text %}}

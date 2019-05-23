@@ -46,6 +46,11 @@ theme = "istani"
     url = "https://files.spellborn.org/latest.zip"
     weight = 51
 
+  [[menu.main]]
+    identifier = "Donate"
+    name = "Donate"
+    url = "https://donorbox.org/spellborn-reborn"
+    weight = 40
 
   [[menu.footergame]]
     identifier = "highhouses"

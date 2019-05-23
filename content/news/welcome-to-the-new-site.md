@@ -7,7 +7,7 @@ tags: [ "welcome", "website" ]
 description: "We have just launched the new website!"
 leadtext: "Welcome to our new website"
 headerimage: "ringfell.jpg"
-author: "kev.in"
+author: "Kevin"
 ---
 
 {{% content-text %}}
