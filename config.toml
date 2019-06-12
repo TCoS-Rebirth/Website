@@ -42,8 +42,8 @@ theme = "istani"
   [[menu.main]]
     identifier = "client2"
     parent = "Installation"
-    name = "Download latest client"
-    url = "https://files.spellborn.org/latest.zip"
+    name = "Download installer"
+    url = "https://files.spellborn.org/launcher/installer.exe"
     weight = 51
 
   [[menu.main]]
@@ -67,8 +67,8 @@ theme = "istani"
 
   [[menu.footerquick]]
     identifier = "client"
-    name = "Latest client"
-    url = "https://files.spellborn.org/latest.zip"
+    name = "Download installer/patcher"
+    url = "https://files.spellborn.org/launcher/installer.exe"
     weight = 10
 
 
