@@ -88,8 +88,7 @@ author: "Kevin"
 {{% content-text %}}
 
   <h2>4. Download the client</h2>
-  <p>You can always find the latest version in this site's menu (The Game > Download Latest Client), but right now you can download it right here.</p>
-  <p>{{< cta url="https://files.spellborn.org/launcher/installer.exe" title="Download latest version of Spellborn" target="_blank">}}</p>
+  <p>You may now download the client through our custom launcher (The Game > Download Latest Client)</p>
 
 {{% /content-text %}}
 
@@ -97,7 +96,7 @@ author: "Kevin"
 {{% content-text %}}
 
   <h2>5. Install the Client</h2>
-  <p>Unzip the game to your harddrive in a folder your choice, run the *bin\Client\Sb_client.exe* file and enjoy the game!</p>
+  <p>After running the setup for the launcher you may run the launcher to install and play Spellborn. Enjoy!</p>
 
 {{% /content-text %}}
 
