@@ -30,6 +30,13 @@ theme = "istani"
 	  name = "High Houses"
 	  url = "/content/high-houses/"
 	  weight = 40
+  
+  [[menu.main]]
+  	identifier = "game2"
+	  parent = "The Game"
+	  name = "Classes"
+	  url = "/content/classes/"
+	  weight = 41
 
 
   [[menu.main]]
