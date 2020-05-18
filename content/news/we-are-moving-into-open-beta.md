@@ -19,9 +19,7 @@ author: "Kevin"
 {{% /content-text %}}
 
 
-{{% content-media %}}
-  {{< youtube ftseyuky0co >}}
-{{% /content-media %}}
+{{< youtube ftseyuky0co >}}
 
 
 {{% content-text %}}

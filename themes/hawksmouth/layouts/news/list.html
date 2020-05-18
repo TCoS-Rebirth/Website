@@ -1,0 +1,39 @@
+{{ define "main" }}
+<section class="hero-panel" id="hero-news">
+    <div class="wrapper">
+        <h1>News</h1>
+        <p>All the latest information and news.</p>
+    </div>
+</section>
+<div class="wrapper news">
+    <div class="grid-x grid-padding-x small-up-1 medium-up-2 large-up-3">
+            {{ range .Data.Pages }}
+                    <div class="cell">
+                    <a href="{{.Permalink}}">
+                        <div class="card news-card">
+                            <img src="/img/headers/{{ .Params.headerimage }}">
+                            <div class="card-section">
+                                <article class="news-card-article">
+                                    <h4 class="news-card-title">{{.Title}}</h4>
+                                    <p class="news-card-description">{{.Description}}</p>
+                                </article>
+                                <div class="news-card-meta grid-x grid-margin-x">
+                                    {{ with .Params.author }}
+                                        <div class="cell small-4 news-card-author-image">
+                                            <img src="/img/author/{{ . }}.png" alt="{{ . }}">
+                                        </div>
+                                    {{ end }}
+                                    <div class="cell auto">
+                                        <p><small>by {{ .Params.Author }}</small></p>
+                                        <p><small>{{ .Date.Format "Monday, 2 January 2006" }}</small></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            {{ end }}
+            </div>
+        </div>
+    </div>
+{{ end }}

@@ -1,0 +1,87 @@
+{{ define "main" }}
+	<div class="row expanded collapse">
+		<div class="column">
+			<div class="large-article-header">
+				<div class="large-article-header-content">
+					<div class="center-container">
+						<div class="article-title">
+							<h1>{{ .Title }}</h1>
+							{{ with .Params.leadtext }}
+								<h2>{{ . }}</h2>
+							{{ end }}
+						</div>
+						<div class="article-details">
+							{{ with .Params.author }}
+							<div class="article-author">
+								<img src="/images/author/{{ . }}.png" alt="{{ . }}" />
+								<a href="#">{{ . }}</a>
+							</div>
+							{{ end }}
+							<div class="auto cell">
+								{{ with .Params.tags }}
+								<ul id="tags" class="no-bullet inline">
+									{{ range . }}
+									<li> <span class="secondary label"><a href="{{ "tags" | absURL }}/{{ . | urlize }}">{{ . }}</span></a> </li>
+									{{ end }}
+								</ul>
+								{{ end }}
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<section id="blogpost" class="animated fadeIn grid-container">
+		<div class="cell">
+			<h1 id="title"></h1>
+			<div>
+				<article id="content">
+					{{ .Content }}
+				</article>
+			</div>
+		</div>
+	</section>
+	<!-- Meta section -->
+	<section class="metaSinglePost grid-container" id="blog-post-meta">
+		<div class="grid-container">
+			<div class="cell grid-margin-x">
+				<div class="grid-x">
+					<!-- Date -->
+					<div class="auto cell">
+						<p class="auto cell" id="date"> </p>
+					</div>
+					<!--Minimalism, not needed. But cool. Preserving. <p class="small-1 right cell" id="wordcount"> {{ .WordCount }} words </p>-->
+					<!-- Post tags -->
+
+				</div>
+			</div>
+			<div class="grid-x" id="blog-post-nav">
+				{{ with .PrevInSection }}
+				<div class="small-6 cell align-right">
+					<a class="previous" href="{{.Permalink}}"> {{.Title}}</a>
+				</div>
+				{{ end }}
+				{{ with .NextInSection }}
+				<div class="small-6 cell align-left">
+					<a class="next" href="{{.Permalink}}"> {{.Title}}</a>
+				</div>
+				{{ end }}
+			</div>
+		</div>
+	</section>
+
+	{{ with .Params.headerimage }}
+	<style>
+		.large-article-header
+		{
+			background: url('/img/headers/{{ . }}') center center no-repeat !important;
+			background-size: cover !important;
+		}
+	</style>
+	{{ end }}
+{{ end }}
+  
+  
+  

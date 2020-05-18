@@ -1,0 +1,74 @@
+{{ "<!-- BEGIN FOOTER -->" | safeHTML }}
+<footer>
+<div class="grid-x wrapper">
+		
+		<div class="cell small-12 medium-4 large-4">
+			<h4>About Spellborn</h4>
+			<hr>
+			<ul>
+				{{ $url := . }}
+				{{ range .Site.Menus.footergame }}
+				<li class="{{ if eq $url (.URL | relLangURL) }}active{{end}}">
+					{{ if eq (hasPrefix .URL "mailto:") true }}
+					<a class="" href="{{ .URL }}">{{ .Name }}</a>
+					{{ else }}
+					<a class="" href="{{ .URL | relLangURL }}">{{ .Name }}</a>
+					{{ end }}
+				</li>
+				{{ end }}
+			</ul>
+		</div>
+		
+		<div class="cell small-12 medium-4">
+			<h4>Links</h4>
+			<hr>
+			<ul>
+				{{ $url := . }}
+				{{ range .Site.Menus.footerquick }}
+				<li class="{{ if eq $url (.URL | relLangURL) }}active{{end}}">
+					{{ if eq (hasPrefix .URL "mailto:") true }}
+					<a class="" href="{{ .URL }}">{{ .Name }}</a>
+					{{ else }}
+					<a class="" href="{{ .URL | relLangURL }}">{{ .Name }}</a>
+					{{ end }}
+				</li>
+				{{ end }}
+			</ul>
+		</div>
+		
+		<div class="cell small-12 medium-4">
+			<h4>Social</h4>
+			<hr>
+			<ul>
+				{{ $url := . }}
+				{{ range .Site.Menus.footermore }}
+				<li class="{{ if eq $url (.URL | relLangURL) }}active{{end}}">
+					{{ if eq (hasPrefix .URL "mailto:") true }}
+					<a class="" href="{{ .URL }}">{{ .Name }}</a>
+					{{ else }}
+					<a class="" href="{{ .URL | relLangURL }}">{{ .Name }}</a>
+					{{ end }}
+				</li>
+				{{ end }}
+			</ul>
+		</div>
+
+	</div>
+</footer> {{ "<!-- END FOOTER -->" | safeHTML }}
+
+
+</div> {{ "<!-- End page content menu wrapper -->" | safeHTML }}
+
+</div> {{ "<!-- End of global off canvas inner wrapper -->" | safeHTML }}
+</div> {{ "<!-- End of global off canvas wrapper -->" | safeHTML }}
+
+
+{{ "<!-- JS includes -->" | safeHTML }}
+
+<script src="{{ .Site.BaseURL }}js/jquery.js"></script>
+<script src="{{ .Site.BaseURL }}js/what-input.js"></script>
+<script src="{{ .Site.BaseURL }}js/foundation.js"></script>
+<script src="{{ .Site.BaseURL }}js/app.js"></script>
+
+</body>
+</html>

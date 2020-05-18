@@ -1,0 +1,17 @@
+{{ partial "header.html" . }}
+{{ partial "nav.html" . }}
+{{ partial "hero-homepage.html" . }}
+<!-- Code that all your templates share, like a header -->
+{{ block "main" . }}
+<!-- The part of the page that begins to differ between templates -->
+{{ end }}
+
+{{ partial "footer.html" . }}
+
+{{ block "scripts" . }}
+<!-- Allows to load scripts on the end of the page -->
+{{ end }}
+
+
+</body>
+</html>

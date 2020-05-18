@@ -1,0 +1,14 @@
+{{ "<!-- BEGIN NAV BAR DESKTOP -->" | safeHTML }}
+
+<nav class="top-bar nav-desktop sticky" data-sticky>
+	<div class="wrapper">
+  		<div class="top-bar-center">
+        	<ul class="menu horizontal menu-desktop">
+			{{ $currentNode := . }}	
+			{{ range .Site.Menus.main }}
+          	<li><a class="nav-item{{if or ($currentNode.IsMenuCurrent "main" .) ($currentNode.HasMenuCurrent "main" .) }} active{{end}}" href="{{.URL}}">{{ .Name}}</a></li>
+			{{end}}
+        	</ul>
+  	  	</div>
+	</div>
+</nav> {{ "<!-- END NAV BAR DESKTOP -->" | safeHTML }}

@@ -10,8 +10,6 @@ headerimage: "openbeta.jpg"
 author: "Kevin"
 ---
 
-{{% content-text %}}
-
   <p>Hello everybody - the last few weeks have been amazing and we're now up at 900 accounts!</p>
   <p>To celebrate that, we have a new update!</p>
 
@@ -42,7 +40,6 @@ author: "Kevin"
   <p>Moving forward, you'll be able to install and update the game using our newly released launcher.</p>
   <p>You can download it by clicking the button below - beware that it'll perform a clean install on the first launch.</p>
   <p>{{< cta url="https://files.spellborn.org/launcher/installer.exe" title="Click here to install the launcher and play the newest version">}}</p>
-{{% /content-text %}}
 
 
 {{% content-text %}}
