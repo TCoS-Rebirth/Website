@@ -1,108 +1,50 @@
 ---
-title: "Getting Started"
+title: "Getting started"
 date: 2019-05-09T8:43:58+01:00
 draft: false
-tags: [ "getting started" ]
+tags: [ "getting started", "installation", "launcher" ]
 leadtext: "A step by step guide on how to install the game and create an account"
 headerimage: "arena.jpg"
 ---
----
-title: "New game update and launcher"
-date: 2019-06-10T8:43:58+01:00
-draft: false
-summary: "A new game update and way to update your game has just launched!"
-tags: [ "launcher", "game update" ]
-description: "A new game update has been released and the launcher has arrived!"
-leadtext: "A new game update has been released and the launcher has arrived!"
-headerimage: "openbeta.jpg"
-author: "Kevin"
----
 
-{{% content-text %}}
+## Create a game account
+In order to play Spellborn, you will need to create a game account.
 
-  <p>Hello everybody - the last few weeks have been amazing and we're now up at 900 accounts!</p>
-  <p>To celebrate that, we have a new update!</p>
+You can create one by going to the account-creation page by using the button below.
 
-  <h2>Update notes, version 1.1.0.5c</h2>
-        <span class="label label-success">Quest fixes</span>
-        <ul>
-                        <li><b>He Remains Powerful</b> - Fixed missing quest parts. Fixed empty text in conversations.</li>
-                        <li><b>A Token of Sincerity</b> - Fixed despawning of Vednidher when he reaches the end of his escort.</li>
-                        <li><b>Palace Love</b> - Fixed missing conversations at the end of the quest.</li>
-                        <li><b>Time For A Change Of Style</b> - Changed the war scene location in the quest text from north of the docks to south of the docks.</li>
-                        <li><b>Mugwum Is Guilty!</b> - Fixed Mugwum not despawning when he is at the gate. This prevents new players from interacting with him.</li>
-                        <li><b>The Pedestal Of Light</b> - History book was invisible so it was impossible to find the correct order.</li>
-                        <li><b>Through The Stomach</b> - Fixed small text error. Changed Soul Shop into Spirit Shop.</li>
-                </ul>
-        <span class="label label-warning">Misc fixes</span>
-        <ul>
-                        <li>Fixed History book not spawning for HighHouse Maul quest.</li>
-                        <li> Fixed bug in NPC Chat script that created invulnerable enemies.</li>
-                        <li>Ancestral Forge - Fixed Orros being stuck at low health.</li>
-                        <li>Fixed typo in quest Road of the Conscript.</li>
-                        <li>Pit District: NPC with missing label has been renamed to Pold the Soulwarden.</li>
-                        <li>Spirit Guardian now has a correct name label.</li>
-                        <li>Added more resolutions to the option menu.</li>
-                </ul>
+**Please do NOT use your account name as a character name, for security reasons.**
 
+**Note your password or store it in a password manager, since resetting your password is currently only possible by contacting a GM.**
 
-  <h2>Enough talking, how can I download this update?</h2>
-  <p>Moving forward, you'll be able to install and update the game using our newly released launcher.</p>
-  <p>You can download it by clicking the button below - beware that it'll perform a clean install on the first launch.</p>
-  <p>{{< cta url="https://files.spellborn.org/launcher/installer.exe" title="Click here to install the launcher and play the newest version">}}</p>
-{{% /content-text %}}
+<a class="button" href="https://www.spellborn.nl" title="Create game account" target="_blank">Create game account</a>
 
+## Download the game client
+The suggested (and only supported way) of download Spellborn is through our launcher.
+This launcher will install and keep Spellborn up-to-date.
 
-{{% content-text %}}
+<a class="button" href="https://files.spellborn.org/launcher/installer.exe" title="Download launcher" target="_blank">Download launcher</a>
 
-  <p><i>- The Spellborn Reborn Team.</i></p>
+**The launcher currently does not support resuming downloads, hopefully we'll be able to add that in the future.**
 
-{{% /content-text %}}
-{{% content-text %}}
+Should you have issues with the launcher, please ask a question on the forums or on our Discord-server.
 
-  <h2>1. Register on the forums</h2>
-  <p>This is needed so you can report bugs or issues.<br />If you already have an account, you can skip this step.</p>
-  <p>{{< cta url="https://forum.spellborn.org/member.php?action=register" title="Create forum account" target="_blank">}}</p>
+A debugging tool for the launcher is currently being worked on.
 
-{{% /content-text %}}
+Upon launching the launcher, it will install the game.
 
+## Register on the forums.
+This is not required, but highly suggested since this is the location where bugs can be reported or when you get stuck.
 
-{{% content-text %}}
+You can also find quest help here.
 
-  <h2>2. Join the beta group on the forums</h2>
-  <p>If you're part of the open beta group, we can notify you when there are updates.</p>
-  <p>{{< cta url="https://forum.spellborn.org/usercp.php?action=usergroups" title="Join the Open beta group" target="_blank">}}</p>
+<a class="button" href="https://forum.spellborn.org/member.php?action=register" target="_blank">Create a forum account</a>.
 
-{{% /content-text %}}
+## Join our Discord server
+Just as we suggest you join the forums, we also suggest you to join our very active Discord server.
 
+Should you have questions, there's always another player or GM online here!
 
-{{% content-text %}}
+<a class="button" href="https://discord.gg/jA6EwuX" target="_blank">Join our Discord-server</a>
 
-  <h2>3. Register a game account</h2>
-  <p>You'll obviously need a game account to play the game.<br />Note: For security reasons, don't use your **account name** as a character name!</p>
-  <p>{{< cta url="https://www.spellborn.nl" title="Create game account" target="_blank">}}</p>
+Do you have any further questions, or remarks? Make sure you'll let us know on the forums or on our <a href="https://discord.gg/M8u7AsG">Discord channel</a>.
 
-{{% /content-text %}}
-
-
-{{% content-text %}}
-
-  <h2>4. Download the client</h2>
-  <p>You may now download the client through our custom launcher (The Game > Download Latest Client)</p>
-
-{{% /content-text %}}
-
-
-{{% content-text %}}
-
-  <h2>5. Install the Client</h2>
-  <p>After running the setup for the launcher you may run the launcher to install and play Spellborn. Enjoy!</p>
-
-{{% /content-text %}}
-
-
-{{% content-text %}}
-
-  <p>Do you have any further questions, or remarks? Make sure you'll let us know on the forums or on our <a href="https://discord.gg/M8u7AsG">Discord channel</a>.</p>
-
-{{% /content-text %}}

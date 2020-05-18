@@ -1,7 +1,7 @@
 baseURL = "https://spellborn.org/"
 languageCode = "en-us"
-title = "The Chronicles of Spellborn Reborn"
-theme = "istani"
+title = "The Chronicles of Spellborn - Reborn"
+theme = "hawksmouth"
 
 [menu]
 
@@ -26,32 +26,15 @@ theme = "istani"
 
   [[menu.main]]
   	identifier = "game1"
-	  parent = "The Game"
 	  name = "High Houses"
 	  url = "/content/high-houses/"
 	  weight = 40
-  
-  [[menu.main]]
-  	identifier = "game2"
-	  parent = "The Game"
-	  name = "Classes"
-	  url = "/content/classes/"
-	  weight = 41
-
 
   [[menu.main]]
     identifier = "client1"
-    parent = "Installation"
     name = "Get Started"
     url = "/content/getting-started/"
     weight = 50
-
-  [[menu.main]]
-    identifier = "client2"
-    parent = "Installation"
-    name = "Download installer"
-    url = "https://files.spellborn.org/launcher/installer.exe"
-    weight = 51
 
   [[menu.main]]
     identifier = "Donate"
@@ -90,3 +73,22 @@ theme = "istani"
     name = "Discord"
     url = "https://discord.gg/M8u7AsG"
     weight = 20
+
+
+[params.meta]
+description = "The Chronicles of Spellborn - Reborn. Enjoy the MMORPG, better than ever!"
+keywords = "mmorpg, rpg, spellborn, chronicles of spellborn, enclave, game"
+
+[params.hero]
+herotitle = "EXPLORE THE DEMON ARMY CAMP"
+herodiscription = "Never seen before content is now live!"
+btnblue = "Learn more about Demon Army Camp"
+btngreen = "Get started with Spellborn!"
+
+[params.footer]
+phone = "02920 000000"
+email = "hello@example.com"
+address = "123 Busy Street"
+
+[markup.goldmark.renderer]
+unsafe= true
