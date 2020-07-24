@@ -35,3 +35,38 @@
 		</div>
 	</div>
 </section>
+
+<section class="hero-panel" id="homepage-news">
+		<div class="wrapper">
+			<div class="grid-x grid-padding-x small-up-1 medium-up-2 large-up-3">
+				{{ range first 3 (where site.RegularPages "Type" "in" site.Params.mainSections).ByDate.Reverse }}
+				<div class="cell">
+					<a href="{{.Permalink}}">
+						<div class="card news-card">
+							<img src="/img/headers/{{ .Params.headerimage }}">
+							<div class="card-section">
+								<article class="news-card-article">
+									<h4 class="news-card-title">{{.Title}}</h4>
+									<p class="news-card-description">{{.Description}}</p>
+								</article>
+								<div class="news-card-meta grid-x grid-margin-x">
+									{{ with .Params.author }}
+									<div class="cell small-4 news-card-author-image">
+										<img src="/img/author/{{ . }}.png" alt="{{ . }}">
+									</div>
+									{{ end }}
+									<div class="cell auto">
+										<p><small>by {{ .Params.Author }}</small></p>
+										<p><small>{{ .Date.Format "Monday, 2 January 2006" }}</small></p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</a>
+				</div>
+				{{ end }}
+			</div>
+	</div>
+		</div>
+	</div>
+</section>
