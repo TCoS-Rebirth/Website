@@ -1,0 +1,83 @@
+
+{{ define "main" }}
+
+<section id="logo-big" class="animated fadeIn grid-container">
+    <div class="grid-x grid-padding-x">
+        <div class="large-12 hide-for-small-only text-center" id="tcos-logo-desktop">
+            <img src="img/logo_spellborn.png" id="avatar" alt="The Chronicles of Spellborn - Reborn!">
+        </div>
+        <div class="small-12 show-for-small-only text-center" id="tcos-logo-mobile">
+            <img src="img/logo_spellborn.png" id="avatar" alt="The Chronicles of Spellborn - Reborn!">
+        </div>
+    </div>
+</section>
+
+<section id="game-action-bar" class="animated fadeIn hide-for-small-only">
+    <div class="grid-container">
+        <div class="grid-x grid-padding-x">
+            <div class="small-6 medium-3 cell text-center">
+                <a class="button large" data-open="registerAccount">Create account</a>
+            </div>
+            <div class="small-6 medium-3 cell text-center">
+                <a class="button large" href="https://files.spellborn.org/latest.zip">Download client<br>
+                    <small class="gameversion">Latest version: 1.1.0.4</small>
+                </a>
+            </div>
+            <div class="small-6 medium-3 cell text-center">
+                <a class="button large" href="https://spellborn.org/news/we-are-moving-into-open-beta/">Getting started</a>
+            </div>
+            <div class="small-6 medium-3 cell text-center">
+                <a class="button large">Donate</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="news">
+    <div class="grid-container">
+        <div class="grid-x grid-padding-x">
+        {{ range first 4 (where .Data.Pages "Section" "news").ByDate.Reverse }}
+            <div class="small-12 medium-6 large-3 cell news-card">
+                <a href="{{.Permalink}}">
+                    <div class="card">
+                        <div class="card-divider">
+                            {{.Title}}
+                        </div>
+                        <div class="articleListImg" style="background: url('/img/headers/{{ .Params.headerimage }}') center center no-repeat !important; background-size: cover !important; }"></div>
+                        <div class="card-section">
+                            <p>{{.Description}}</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        {{ end }}
+        </div>
+    </div>
+</section>
+
+<section id="introduction" class="animated fadeIn grid-container">
+    <div class="grid-x grid-padding-x">
+        <div class="small-12 cell">
+            <h1>What lies hidden... <strong>must be found</strong></h1>
+            <h2>10 years later, The Chronicles of Spellborn rises from the ashes!</h2>
+            <hr />
+            <p class="small-12 cell right">
+                <p>It was November 2008 when the game called The Chronicles of Spellborn was first released. The game is marked as an MMORPG, but stood out from the rest, because of its unique art style and combat system. The game had a troublesome launch, and after being online for just 2 years, the servers shut down for good.</p>
+                <p>Since then, a group of enthousiasts started a project called Spellborn Reborn. Together they tried reverse engineering the game, and by doing so, create a game server for people to join.</p>
+                <p>Now, more than 10 years later, the moment has finally come for everybody to play this rough diamond once more. Set foot in the Enclave and amaze yourself once more of the stunning shards that the game offers. Even after 10 years the game still holds up pretty good, and the team even managed to fix some issues in the game.</p>
+                <p>It’s even possible to play Tomb of the Ancestors, a dungeon that was closed short after release because of the many amount of bugs.</p>
+                <p>So hop on, join the open beta and set your first steps in <strong>Hawksmouth</strong>!</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="large reveal" id="registerAccount" data-reveal>
+    <iframe src="https://www.spellborn.nl" style="border:0px #ffffff none;" name="register" scrolling="no" frameborder="0" marginheight="0px" marginwidth="0px" height="700px" width="100%" allowfullscreen></iframe>
+</div>
+
+{{ end }}
+
+{{ define "footer" }}
+
+{{ end }}

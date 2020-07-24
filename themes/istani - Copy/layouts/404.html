@@ -1,0 +1,12 @@
+{{ define "main" }}
+<section id="blogpost" class="animated fadeIn grid-container">
+    <div class="cell">
+        <h1 id="title">{{ .Title }}</h1>
+        <div>
+            <article id="content">
+                {{ .Content }}
+            </article>
+        </div>
+    </div>
+</section>
+{{ end }}
