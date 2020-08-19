@@ -19,4 +19,6 @@ I could keep going on, but instead I'll point you to <a href=https://files.spell
 
 We hope that you'll like this change and we wish you a lot of fun in the game!
 
+We'll see you in game -
+
 - Kevin and the Spellborn team!
