@@ -15,7 +15,7 @@ The quest to improve Spellborn goes on and a massive update has just gone live!
 
 This mainly focusses around fixing quest bugs, updating skill balance and even introduces some new quests to either lead you to new areas or help you cover the gap between levels.
 
-I could keep going on, but instead I'll point you to <a href=https://files.spellborn.org/patchnotes/patchnotes-1113.html">the full patch notes.</a>
+I could keep going on, but instead I'll point you to <a href="https://files.spellborn.org/patchnotes/patchnotes-1113.html">the full patch notes.</a>
 
 We hope that you'll like this change and we wish you a lot of fun in the game!
 
