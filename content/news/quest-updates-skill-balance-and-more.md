@@ -1,6 +1,6 @@
 ---
 title: "Quest updates, skill balance and even more!"
-date: 2020-08-20T23:19:48+02:00
+date: 2020-08-19T23:19:48+02:00
 draft: false
 summary: "Polishing the diamond."
 tags: [ "polish", "quest updates", "skill balance" ]
