@@ -1,7 +1,7 @@
 ---
 title: "New Game Update and Launcher Overhaul"
 date: 2022-01-08T22:07:49+01:00
-draft: true
+draft: false
 summary: "Some game updates and a major launcher overhaul."
 tags: [ "launcher", "update" ]
 description: "The game has been updated and the launcher has been overhauled as well."
