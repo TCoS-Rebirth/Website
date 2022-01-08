@@ -23,7 +23,7 @@ The suggested (and only supported way) of download Spellborn is through our laun
 This launcher will install and keep Spellborn up-to-date.
 
 <a class="button" href="https://files.spellborn.org/launcher/launcher-installer.exe" title="Download launcher" target="_blank">Download launcher</a>
-<a class="button" href="https://files.spellborn.org/launcher/launcher-installer.exe" title="Download old launcher (for Windows Vista/8/XP)" target="_blank">Download old launcher (for Windows Vista/8/XP)</a>
+<a class="button secondary" href="https://files.spellborn.org/launcher/installer.exe" title="Download old launcher (for Windows Vista/8/XP)" target="_blank">Download old launcher (for Windows Vista/8/XP)</a>
 
 **The launcher currently does not support resuming downloads, hopefully we'll be able to add that in the future.**
 
