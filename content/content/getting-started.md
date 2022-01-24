@@ -33,6 +33,16 @@ A debugging tool for the launcher is currently being worked on.
 
 Upon launching the launcher, it will install the game.
 
+<div class="alert warning">
+<p>Please make sure to limit the game to 60 FPS - the game can encounter issues if not locked to 60 FPS. </p>
+<p>Information about how to do this can be found:</p>
+<ul>
+    <li><a href="https://www.howtogeek.com/509097/how-to-set-a-maximum-frame-rate-in-nvidias-drivers/">Here for Nvidia cards (make sure to follow for specific games only).</a></li>
+    <li><a href="https://www.amd.com/en/technologies/radeon-software-chill">Use this tool for AMD cards.</a></li>
+</ul>
+
+</div>
+
 ## Register on the forums.
 This is not required, but highly suggested since this is the location where bugs can be reported or when you get stuck.
 
