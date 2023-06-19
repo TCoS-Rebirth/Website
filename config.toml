@@ -42,6 +42,12 @@ theme = "hawksmouth"
     url = "https://donorbox.org/spellborn-reborn"
     weight = 40
 
+  [[menu.main]]
+    identifier = "status"
+    name = "Server status"
+    url = "/content/server-status/"
+    weight = 60
+
   [[menu.footergame]]
     identifier = "highhouses"
     name = "High Houses"
