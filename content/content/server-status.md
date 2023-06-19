@@ -1,5 +1,5 @@
 ---
-title: "Server stats"
+title: "Server status"
 date: 2023-06-19T8:43:58+01:00
 draft: false
 tags: [ "server status" ]
