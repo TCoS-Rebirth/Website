@@ -6,7 +6,7 @@ summary: "The move to the new server and account system."
 tags: [ "new server", "future", "account" ]
 description: "The move to the new server and account system."
 leadtext: "And we're live."
-headerimage: "viola.png"
+headerimage: "viola.jpg"
 author: "Kevin"
 ---
 
