@@ -516,7 +516,7 @@ article#content {
 	left: 50%;
 	width: 100vw;
 	height: 100vh;
-	transform: translate(-50%, -20%);
+	transform: translate(-50%, -0%);
 }
 
 @media (min-aspect-ratio: 16 / 9) {
