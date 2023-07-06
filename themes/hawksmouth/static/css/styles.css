@@ -438,7 +438,7 @@ article#content {
 #homepage-hero.hero-panel {
 	padding: 2rem 0;
 	min-height: 100vh;
-	margin-bottom: 0px;
+	margin-bottom: -142px;
 	background: url("../img/hero/dac.jpg") center / cover no-repeat fixed !important;
 }
 
@@ -461,7 +461,17 @@ article#content {
 	text-shadow: -1px -1px #000000;
 	width: ;
 	height: 595px;
-	margin-bottom: 0;
+	margin-bottom: -144px;
+	margin-top: 0;
+}
+
+#homepage-about-the-game .homepage-description {
+	margin-top: 0;
+	padding-top: 208px;
+}
+
+#homepage-spellborn-reborn .homepage-description {
+	padding-top: 136px;
 }
 
 #homepage-about-the-game .homepage-description {
