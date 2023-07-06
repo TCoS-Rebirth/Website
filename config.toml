@@ -86,9 +86,9 @@ description = "The Chronicles of Spellborn - Reborn. Enjoy the MMORPG, better th
 keywords = "mmorpg, rpg, spellborn, chronicles of spellborn, enclave, game"
 
 [params.hero]
-herotitle = "EXPLORE THE DEMON ARMY CAMP"
-herodiscription = "Never seen before content is now live!"
-btnblue = "Learn more about Demon Army Camp"
+herotitle = "EXPLORE AN MMORPG LIKE NO OTHER"
+herodiscription = "Dive into the beautiful world of Spellborn"
+btnblue = "Get started with Spellborn!"
 btngreen = "Get started with Spellborn!"
 
 [params.footer]
