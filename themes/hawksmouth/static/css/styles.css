@@ -519,3 +519,11 @@ article#content {
     width: 177.78vh;
   }
 }
+
+#homepage-hero .wrapper {
+  position: absolute;
+  color: #FFFFFF;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
