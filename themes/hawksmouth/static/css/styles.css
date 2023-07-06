@@ -506,3 +506,16 @@ article#content {
     height: 100vh;
     transform: translate(-50%,-50%);
 }
+@media (min-aspect-ratio: 16/9) {
+  #homepage-hero iframe {
+    /* height = 100 * (9 / 16) = 56.25 */
+    height: 56.25vw;
+  }
+}
+    
+@media (max-aspect-ratio: 16/9) {
+  #homepage-hero iframe {
+    /* width = 100 / (9 / 16) = 177.777777 */
+    width: 177.78vh;
+  }
+}
