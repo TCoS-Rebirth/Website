@@ -10,13 +10,11 @@ headerimage: "arena.jpg"
 ## Create a game account
 In order to play Spellborn, you will need to create a game account.
 
-You can create one by going to the account-creation page by using the button below.
+Creation of a game account is possible either within the launcher (by using the button "Create Account"), or by going to the <a href="https://account.chroniclesofspellborn.com">Spellborn Account</a> system.
 
 **Please do NOT use your account name as a character name, for security reasons.**
 
-**Note your password or store it in a password manager, since resetting your password is currently only possible by contacting a GM.**
-
-<a class="button" href="https://www.spellborn.nl" title="Create game account" target="_blank">Create game account</a>
+<a class="button" href="https://account.chroniclesofspellborn.com/user/signup" title="Create game account" target="_blank">Create game account</a>
 
 ## Download the game client
 The suggested (and only supported way) of download Spellborn is through our launcher.
