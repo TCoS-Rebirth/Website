@@ -1,0 +1,329 @@
+/* Reset style -> aka, remove the padding/margin on elements you otherwise would have. */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * GRID
+ */
+
+/* Set up our grid */
+.container {
+    display: grid;
+    /* Our grid exists out of 4*0.25 free room. */
+    grid-template-columns: 0.25fr 0.25fr 0.25fr 0.25fr;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * NAVIGATION
+ */
+
+/* Our navigation spans the entire width of the grid. */
+.nav {
+    /* We start at column 1. */
+    grid-column-start: 1;
+    /* And end at column 4. */
+    grid-column-end: 5;
+    /* We start at row 1, end at row 2. So that is one row. */
+    grid-row-start: 1;
+    grid-row-end: 2;
+    /* Flexbox makes this part easier. */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #222;
+}
+.nav ul {
+    list-style-type: none;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.nav ul li {
+    display: list-item;
+    float: left;
+    font-family: "Open Sans", sans-serif;
+}
+.nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/*
+ * HOMEPAGE VIDEO
+ * Here is where the magic happens.
+*/
+
+.home-video {
+    /* Once again, full width of the grid. */
+    grid-column: 1/5;
+    /* Maximum height, full viewport here.. */
+    grid-row: 2/3;
+    /* Almost all of it, at least. */
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    margin-top: -3vh;
+    z-index: -5;
+}
+
+.home-video iframe {
+    top: 0;
+    left: 100%;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    text-align: center;
+    z-index: -5;
+}
+
+@media (min-aspect-ratio: 16 / 9) {
+    .home-video  iframe {
+        /* height = 100 * (9 / 16) = 56.25 */
+        height: 56.25vw;
+    }
+}
+
+@media (max-aspect-ratio: 16 / 9) {
+    .home-video  iframe {
+        /* width = 100 / (9 / 16) = 177.777777 */
+        width: 177.78vh;
+    }
+}
+
+.home-video-text {
+    margin-top: 10em;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.home-video-text IMG {
+    max-width: 850px
+}
+
+.home-video-text h1 {
+    line-height: 3.125rem;
+    color: #BFBFBF;
+    font-size: 3em;
+    text-shadow: 1px 1px #000000;
+    font-weight: 600;
+    margin-bottom: 0;
+    font-family: 'Merriweather', serif;
+}
+
+.home-video-text h2 {
+    margin-top: 0.25em;
+    color: rgba(229, 229, 229, 0.600);
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.600);
+    font-size: 2em;
+    font-family: 'Merriweather', serif;
+    text-align: center;
+}
+
+.home-video-text button {
+    background-color: #3adb76;
+    color: #0a0a0a;
+    border: 1px solid #000000;
+    margin-top: 15px;
+    padding: 10px 15px;
+    font-family: "Open Sans", serif;
+    font-size: 1em;
+}
+
+/*
+ * Oracle
+ */
+.home-oracle {
+    display: grid;
+    /* Once again, full width of the grid. */
+    grid-column: 1/5;
+    /* Maximum height, full viewport here.. */
+    grid-row: 3/4;
+    background: url("../../../static/img/home/block-1.jpg") center right / auto no-repeat #506671;
+    grid-template-columns: subgrid;
+    min-height: 595px;
+}
+.home-oracle-text {
+    grid-column: 1/3;
+    margin-top: 10em;
+    margin-left: 10em;
+}
+
+.home-oracle h2 {
+    font-family: 'Merriweather', serif;
+    font-size: 2rem;
+    color: #FBFBFB;
+    text-shadow: -1px -1px #000000;
+}
+
+.home-oracle p {
+    font-family: "Open Sans", sans-serif;
+    font-size: 1rem;
+    line-height: 1.5em;
+    color: #FBFBFB;
+    text-shadow: -1px -1px #000000;
+    margin-top: 1.5em;
+}
+
+/*
+ * Quarterstone
+ */
+.home-quarterstone {
+    display: grid;
+    /* Once again, full width of the grid. */
+    grid-column: 1/5;
+    /* Maximum height, full viewport here.. */
+    grid-row: 4/5;
+    background: url("../../../static/img/home/block-2.jpg") center left / auto no-repeat #2E2F2A;
+    grid-template-columns: subgrid;
+    min-height: 595px;
+}
+.home-quarterstone-text {
+    grid-column: 3/5;
+    margin-top: 10em;
+    margin-right: 10em;
+}
+
+.home-quarterstone h2 {
+    font-family: 'Merriweather', serif;
+    font-size: 2rem;
+    color: #FBFBFB;
+    text-shadow: -1px -1px #000000;
+}
+
+.home-quarterstone p {
+    font-family: "Open Sans", sans-serif;
+    font-size: 1rem;
+    line-height: 1.5em;
+    color: #FBFBFB;
+    text-shadow: -1px -1px #000000;
+    margin-top: 1.5em;
+}
+
+/*
+ * Account
+ */
+.home-account {
+    display: grid;
+    /* Once again, full width of the grid. */
+    grid-column: 1/5;
+    /* Maximum height, full viewport here.. */
+    grid-row: 5/6;
+    background: linear-gradient(90deg, rgba(45,52,79,1) 50%, rgba(45,52,79,0.85) 55%, rgba(45,52,79,0.75) 60%, rgba(0,212,255,0) 100%), url("../../../static/img/home/block-3.jpg") center right / auto no-repeat #2E2F2A;
+    grid-template-columns: subgrid;
+    min-height: 495px;
+}
+.home-account-text {
+    grid-column: 1/3;
+    margin-top: 7.5em;
+    margin-left: 10em;
+}
+
+.home-account h2 {
+    font-family: 'Merriweather', serif;
+    font-size: 2rem;
+    color: #FBFBFB;
+    text-shadow: -1px -1px #000000;
+}
+
+.home-account p {
+    font-family: "Open Sans", sans-serif;
+    font-size: 1rem;
+    line-height: 1.5em;
+    color: #FBFBFB;
+    text-shadow: -1px -1px #000000;
+    margin-top: 1.5em;
+}
+
+.home-account a {
+    text-decoration: none;
+    color: #7babd7;
+    font-weight: bold;
+    text-shadow: 0 0 3px #000000;
+}
+
+/*
+ * News
+ */
+.home-news {
+    background-color: #CCCCCC;
+    padding: 0 0px 50px;
+    background-image: url("../img/swirl_pattern.png");
+    display: grid;
+    /* Once again, full width of the grid. */
+    /* Maximum height, full viewport here.. */
+    grid-row: 6/7;
+    max-height: 495px;
+    grid-column: 1/5;
+}
+
+.home-news-wrapper {
+    display: grid;
+    max-width: 80vw;
+    grid-row: 6/7;
+    grid-column: 2/5;
+    grid-template-columns: repeat(4, 0.25fr);
+    /* Our grid exists out of 4*0.25 free room. */
+    /*grid-template-columns: 0.15fr 0.25fr 0.25fr 0.25fr 0.25fr 0.15fr;*/
+    margin: 0;
+    padding: 0;
+}
+
+.home-news-article {
+    margin: 0.5em;
+    margin-top: 2em;
+    background: #ffffff;
+    border: 1px solid #cacaca;
+    width: 21.5vw;
+    overflow: hidden;
+}
+
+.home-news-article h2 {
+    font-family: "Merriweather", sans-serif;
+    font-size: 0.95em;
+    font-weight: bold;
+    line-height: 1.3;
+    margin: 0.15em 1em 0.15em 1em;
+    border-bottom: 1px dotted #e7e7e7;
+    padding-bottom: 10px;
+}
+
+.home-news-article h3 {
+    font-family: "Open Sans", sans-serif;
+    font-size: 0.80em;
+    font-weight: normal;
+    line-height: 1.3;
+    text-align: center;
+    margin: 0.45em 1em 2em;
+}
+.home-news-article IMG {
+    max-height: 220px;
+    min-width: 25vw;
+    max-width: 35vw;
+    overflow: hidden;
+}
+.home-news .meta {
+    border-top: 1px solid #cacaca;
+    padding: 0.5em 2em;
+    background-color: #f3f3f3;
+    min-height: 4em;
+    font-family: 'Open Sans', serif;
+    font-size: 0.8em;
+}
+.home-news .meta p {
+    margin-bottom: 1em;
+}
