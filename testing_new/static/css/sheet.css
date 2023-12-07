@@ -291,7 +291,6 @@
     min-width: 25em;
     max-width: 40em;
     overflow: hidden;
-
 }
 
 .home-news-article h2 {
@@ -313,10 +312,11 @@
     margin: 0.45em 1em 2em;
 }
 .home-news-article IMG {
-    max-height: 220px;
-    min-width: 25vw;
-    max-width: 35vw;
+    max-height: 250px;
+    min-height: 250px;
     overflow: hidden;
+    object-fit: cover;
+    width: 100%;
 }
 .home-news .meta {
     border-top: 1px solid #cacaca;
