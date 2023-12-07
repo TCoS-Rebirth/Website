@@ -18,11 +18,20 @@
 }
 
 /*
+ * Generic helper classes.
+ */
+@media (max-width: 576px) {
+    .hide-for-small {
+        display: none;
+    }
+}
+
+/*
  * NAVIGATION
  */
 
 /* Our navigation spans the entire width of the grid. */
-.nav {
+nav {
     /* We start at column 1. */
     grid-column-start: 1;
     /* And end at column 4. */
@@ -36,19 +45,19 @@
     align-items: center;
     background-color: #222;
 }
-.nav ul {
+nav ul {
     list-style-type: none;
     overflow: hidden;
     display: flex;
     justify-content: center;
     width: 100%;
 }
-.nav ul li {
+nav ul li {
     display: list-item;
     float: left;
     font-family: "Open Sans", sans-serif;
 }
-.nav li a {
+nav li a {
     display: block;
     color: white;
     text-align: center;
@@ -57,7 +66,7 @@
 }
 
 /*
- * HOMEPAGE VIDEO
+ * HOMEPAGE
  * Here is where the magic happens.
 */
 
@@ -328,6 +337,34 @@
 }
 .home-news .meta p {
     margin-bottom: 1em;
+}
+
+/*
+ * Let's make the homepage responsive.
+ */
+
+@media (max-width: 1400px) {
+    .home-oracle-text {
+        margin: 0.75em;
+        padding: 7em;
+        background: rgba(80, 102, 113, 0.8);
+        grid-column: 1/5;
+        border-radius: 15px;
+    }
+    .home-quarterstone-text {
+        margin: 0.75em;
+        padding: 7em;
+        background: rgb(46, 47, 42, 0.8);
+        border-radius: 15px;
+        grid-column: 1/5;
+    }
+    .home-account-text {
+        margin: 0.75em;
+        padding: 7em;
+        background: rgb(45, 52, 78, 0.8);
+        border-radius: 15px;
+        grid-column: 1/5;
+    }
 }
 
 /*
