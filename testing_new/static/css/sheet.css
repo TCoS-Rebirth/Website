@@ -4,63 +4,53 @@
     padding: 0;
 }
 
-/*
- * GRID
- */
-
+/* TYPOGRAPHY */
+body {
+    font-family: "Open Sans", sans-serif;
+}
+H1, H2, H3, H4 {
+    font-family: "Merriweather", sans-serif;
+}
+/* GRID */
 /* Set up our grid */
 .container {
     display: grid;
     /* Our grid exists out of 4*0.25 free room. */
     grid-template-columns: 0.25fr 0.25fr 0.25fr 0.25fr;
-    margin: 0;
-    padding: 0;
 }
 
-/*
- * Generic helper classes.
- */
+/* GENERIC HELPER CLASSES */
 @media (max-width: 576px) {
     .hide-for-small {
         display: none;
     }
 }
 
-/*
- * NAVIGATION
- */
-
+/* NAVIGATION */
 /* Our navigation spans the entire width of the grid. */
 nav {
     /* We start at column 1. */
-    grid-column-start: 1;
-    /* And end at column 4. */
-    grid-column-end: 5;
+    grid-column: 1/5;
     /* We start at row 1, end at row 2. So that is one row. */
-    grid-row-start: 1;
-    grid-row-end: 2;
+    grid-row: 1/2;
     /* Flexbox makes this part easier. */
     display: flex;
     justify-content: space-between;
-    align-items: center;
     background-color: #222;
+    z-index: 50;
 }
 nav ul {
     list-style-type: none;
-    overflow: hidden;
     display: flex;
     justify-content: center;
     width: 100%;
 }
-nav ul li {
-    display: list-item;
-    float: left;
-    font-family: "Open Sans", sans-serif;
+nav ul li :hover {
+    background-color: #2a2a2a;
 }
 nav li a {
     display: block;
     color: white;
-    text-align: center;
     padding: 14px 16px;
     text-decoration: none;
 }
@@ -70,27 +60,44 @@ nav li a {
  * Here is where the magic happens.
 */
 
+/* Color overriding on the homepage. */
+#home {
+    h1 {
+        color: #BFBFBF;
+    }
+    .home-video-text h2 {
+        color: rgba(229, 229, 229, 0.600);
+    }
+    h2 {
+        color: #FBFBFB;
+    }
+    p {
+        color: #FBFBFB;
+        text-shadow: -1px -1px #000000;
+    }
+}
+
 .home-video {
     /* Once again, full width of the grid. */
     grid-column: 1/5;
     /* Maximum height, full viewport here.. */
     grid-row: 2/3;
-    /* Almost all of it, at least. */
     height: 100vh;
     overflow: hidden;
     position: relative;
-    margin-top: -3vh;
-    z-index: -5;
+    z-index: 5;
+    margin-top: -150px;
 }
 
 .home-video iframe {
     top: 0;
     left: 100%;
     width: 100vw;
-    height: 100vh;
-    pointer-events: none;
+    height: 110vh;
+    /*pointer-events: none; !* This disables mouse clicking on the video. *!*/
     text-align: center;
-    z-index: -5;
+    z-index: -555;
+    margin-bottom: -50px;
 }
 
 @media (min-aspect-ratio: 16 / 9) {
@@ -110,8 +117,6 @@ nav li a {
 .home-video-text {
     margin-top: 10em;
     position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
     flex-grow: 1;
@@ -119,6 +124,7 @@ nav li a {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    z-index: 150;
 }
 .home-video-text IMG {
     max-width: 850px
@@ -126,24 +132,18 @@ nav li a {
 
 .home-video-text h1 {
     line-height: 3.125rem;
-    color: #BFBFBF;
     font-size: 3em;
     text-shadow: 1px 1px #000000;
     font-weight: 600;
-    margin-bottom: 0;
-    font-family: 'Merriweather', serif;
 }
 
 .home-video-text h2 {
     margin-top: 0.25em;
-    color: rgba(229, 229, 229, 0.600);
     text-shadow: 1px 1px rgba(0, 0, 0, 0.600);
     font-size: 2em;
-    font-family: 'Merriweather', serif;
-    text-align: center;
 }
 
-.home-video-text button {
+.home-video-text .button {
     background-color: #3adb76;
     color: #0a0a0a;
     border: 1px solid #000000;
@@ -151,11 +151,10 @@ nav li a {
     padding: 10px 15px;
     font-family: "Open Sans", serif;
     font-size: 1em;
+    text-decoration: none;
 }
 
-/*
- * Oracle
- */
+/* Oracle */
 .home-oracle {
     display: grid;
     /* Once again, full width of the grid. */
@@ -171,26 +170,17 @@ nav li a {
     margin-top: 10em;
     margin-left: 10em;
 }
-
 .home-oracle h2 {
-    font-family: 'Merriweather', serif;
     font-size: 2rem;
-    color: #FBFBFB;
     text-shadow: -1px -1px #000000;
 }
-
 .home-oracle p {
-    font-family: "Open Sans", sans-serif;
     font-size: 1rem;
     line-height: 1.5em;
-    color: #FBFBFB;
-    text-shadow: -1px -1px #000000;
     margin-top: 1.5em;
 }
 
-/*
- * Quarterstone
- */
+/* Quarterstone */
 .home-quarterstone {
     display: grid;
     /* Once again, full width of the grid. */
@@ -208,24 +198,17 @@ nav li a {
 }
 
 .home-quarterstone h2 {
-    font-family: 'Merriweather', serif;
     font-size: 2rem;
-    color: #FBFBFB;
     text-shadow: -1px -1px #000000;
 }
 
 .home-quarterstone p {
-    font-family: "Open Sans", sans-serif;
     font-size: 1rem;
     line-height: 1.5em;
-    color: #FBFBFB;
-    text-shadow: -1px -1px #000000;
     margin-top: 1.5em;
 }
 
-/*
- * Account
- */
+/* Account */
 .home-account {
     display: grid;
     /* Once again, full width of the grid. */
@@ -243,18 +226,13 @@ nav li a {
 }
 
 .home-account h2 {
-    font-family: 'Merriweather', serif;
     font-size: 2rem;
-    color: #FBFBFB;
     text-shadow: -1px -1px #000000;
 }
 
 .home-account p {
-    font-family: "Open Sans", sans-serif;
     font-size: 1rem;
     line-height: 1.5em;
-    color: #FBFBFB;
-    text-shadow: -1px -1px #000000;
     margin-top: 1.5em;
 }
 
@@ -265,51 +243,46 @@ nav li a {
     text-shadow: 0 0 3px #000000;
 }
 
-/*
- * News
- */
+/* News */
 .home-news {
     background-color: #CCCCCC;
-    padding: 0 0px 50px;
     background-image: url("../img/swirl_pattern.png");
-    display: grid;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
     /* Once again, full width of the grid. */
     /* Maximum height, full viewport here.. */
     grid-row: 6/7;
-    min-height: 10em;
+    /*min-height: 10em;*/
     grid-column: 1/5;
 }
 
 .home-news-wrapper {
+    margin: 2em 2em 2em 2em;
     /* Flexbox makes this part easier. */
     display: flex;
-    justify-content: space-evenly;
-    flex-direction: row;
     flex-wrap: wrap;
-    flex-flow: row wrap;
-    align-items: stretch;
-    row-gap: 5em;
+    justify-content: space-between;
 }
 
 .home-news-article {
-    margin-top: 4em;
-    margin-bottom: 4em;
+    flex: 0 1 calc(25% - 1.5em);
     background: #ffffff;
     border: 1px solid #cacaca;
-    width: 20vw;
-    min-width: 25em;
-    max-width: 40em;
     overflow: hidden;
+    position: relative;
 }
 
 .home-news-article h2 {
-    font-family: "Merriweather", sans-serif;
+    color: #282828 !important;
+    text-align: center;
     font-size: 0.95em;
     font-weight: bold;
     line-height: 1.3;
-    margin: 0.15em 1em 0.15em 1em;
+    margin: 1.25em 1.5em 0.25em 1.5em;
     border-bottom: 1px dotted #e7e7e7;
-    padding-bottom: 10px;
+    padding-bottom: 1em;
 }
 
 .home-news-article h3 {
@@ -318,25 +291,26 @@ nav li a {
     font-weight: normal;
     line-height: 1.3;
     text-align: center;
-    margin: 0.45em 1em 2em;
+    margin: 1.75em 2em 5em;
 }
 .home-news-article IMG {
     max-height: 250px;
     min-height: 250px;
-    overflow: hidden;
     object-fit: cover;
     width: 100%;
 }
 .home-news .meta {
+    text-align: right;
     border-top: 1px solid #cacaca;
-    padding: 0.5em 2em;
     background-color: #f3f3f3;
-    min-height: 4em;
     font-family: 'Open Sans', serif;
-    font-size: 0.8em;
-}
-.home-news .meta p {
-    margin-bottom: 1em;
+    font-size: 0.7em;
+    margin-left: -1.5em;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    width: 100%;
+    padding: 0.5em 10px 0.5em 1em;
 }
 
 /*
@@ -364,6 +338,26 @@ nav li a {
         background: rgb(45, 52, 78, 0.8);
         border-radius: 15px;
         grid-column: 1/5;
+    }
+    .home-news-article {
+        flex: 0 1 calc(50% - 1.5em);
+        margin: 1em 0em 1em 0em;
+        background: #ffffff;
+        border: 1px solid #cacaca;
+        /*width: 20vw;*/
+        /*min-width: 20em;*/
+        /*max-width: 40em;*/
+        overflow: hidden;
+        /*display: flex;*/
+        /*flex-direction: column;*/
+        /*align-items: flex-start;*/
+    }
+    .home-news-wrapper {
+        margin: 2em 1em 2em 1em;
+        /* Flexbox makes this part easier. */
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
     }
 }
 
