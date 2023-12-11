@@ -9,14 +9,14 @@ body {
     font-family: "Open Sans", sans-serif;
 }
 H1, H2, H3, H4 {
-    font-family: "Merriweather", sans-serif;
+    font-family: Merriweather, sans-serif;
 }
 /* GRID */
 /* Set up our grid */
 .container {
     display: grid;
     /* Our grid exists out of 4*0.25 free room. */
-    grid-template-columns: 0.25fr 0.25fr 0.25fr 0.25fr;
+    grid-template-columns: repeat(4, .25fr)
 }
 
 /* GENERIC HELPER CLASSES */
@@ -26,352 +26,348 @@ H1, H2, H3, H4 {
     }
 }
 
-/* NAVIGATION */
-/* Our navigation spans the entire width of the grid. */
-nav {
-    /* We start at column 1. */
-    grid-column: 1/5;
-    /* We start at row 1, end at row 2. So that is one row. */
-    grid-row: 1/2;
-    /* Flexbox makes this part easier. */
-    display: flex;
-    justify-content: space-between;
-    background-color: #222;
-    z-index: 50;
-}
-nav ul {
-    list-style-type: none;
-    display: flex;
-    justify-content: center;
-    width: 100%;
-}
-nav ul li :hover {
-    background-color: #2a2a2a;
-}
-nav li a {
-    display: block;
-    color: white;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-/*
- * HOMEPAGE
- * Here is where the magic happens.
-*/
-
-/* Color overriding on the homepage. */
+/* HOMEPAGE */
 #home {
+    /* Our homepage has a different grid compared to other pages, since it is full width - our other pages aren't full width. */
+    .container {
+        display: grid;
+        /* Our homepage exists out of 4 columns of 25% of the free space. */
+        grid-template-columns: repeat(4, .25fr)
+    }
+
+    /* Typography and color changes on the homepage */
     h1 {
         color: #BFBFBF;
-    }
-    .home-video-text h2 {
-        color: rgba(229, 229, 229, 0.600);
     }
     h2 {
         color: #FBFBFB;
     }
+    .home-video-text h2 {
+        color: rgba(229, 229, 229, .6);
+    }
     p {
         color: #FBFBFB;
-        text-shadow: -1px -1px #000000;
+        text-shadow: -1px -1px #000;
     }
-}
 
-.home-video {
-    /* Once again, full width of the grid. */
-    grid-column: 1/5;
-    /* Maximum height, full viewport here.. */
-    grid-row: 2/3;
-    height: 100vh;
-    overflow: hidden;
-    position: relative;
-    z-index: 5;
-    margin-top: -150px;
-}
-
-.home-video iframe {
-    top: 0;
-    left: 100%;
-    width: 100vw;
-    height: 110vh;
-    /*pointer-events: none; !* This disables mouse clicking on the video. *!*/
-    text-align: center;
-    z-index: -555;
-    margin-bottom: -50px;
-}
-
-@media (min-aspect-ratio: 16 / 9) {
-    .home-video  iframe {
-        /* height = 100 * (9 / 16) = 56.25 */
-        height: 56.25vw;
-    }
-}
-
-@media (max-aspect-ratio: 16 / 9) {
-    .home-video  iframe {
-        /* width = 100 / (9 / 16) = 177.777777 */
-        width: 177.78vh;
-    }
-}
-
-.home-video-text {
-    margin-top: 10em;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    z-index: 150;
-}
-.home-video-text IMG {
-    max-width: 850px
-}
-
-.home-video-text h1 {
-    line-height: 3.125rem;
-    font-size: 3em;
-    text-shadow: 1px 1px #000000;
-    font-weight: 600;
-}
-
-.home-video-text h2 {
-    margin-top: 0.25em;
-    text-shadow: 1px 1px rgba(0, 0, 0, 0.600);
-    font-size: 2em;
-}
-
-.home-video-text .button {
-    background-color: #3adb76;
-    color: #0a0a0a;
-    border: 1px solid #000000;
-    margin-top: 15px;
-    padding: 10px 15px;
-    font-family: "Open Sans", serif;
-    font-size: 1em;
-    text-decoration: none;
-}
-
-/* Oracle */
-.home-oracle {
-    display: grid;
-    /* Once again, full width of the grid. */
-    grid-column: 1/5;
-    /* Maximum height, full viewport here.. */
-    grid-row: 3/4;
-    background: url("../../../static/img/home/block-1.jpg") center right / auto no-repeat #506671;
-    grid-template-columns: subgrid;
-    min-height: 595px;
-}
-.home-oracle-text {
-    grid-column: 1/3;
-    margin-top: 10em;
-    margin-left: 10em;
-}
-.home-oracle h2 {
-    font-size: 2rem;
-    text-shadow: -1px -1px #000000;
-}
-.home-oracle p {
-    font-size: 1rem;
-    line-height: 1.5em;
-    margin-top: 1.5em;
-}
-
-/* Quarterstone */
-.home-quarterstone {
-    display: grid;
-    /* Once again, full width of the grid. */
-    grid-column: 1/5;
-    /* Maximum height, full viewport here.. */
-    grid-row: 4/5;
-    background: url("../../../static/img/home/block-2.jpg") center left / auto no-repeat #2E2F2A;
-    grid-template-columns: subgrid;
-    min-height: 595px;
-}
-.home-quarterstone-text {
-    grid-column: 3/5;
-    margin-top: 10em;
-    margin-right: 10em;
-}
-
-.home-quarterstone h2 {
-    font-size: 2rem;
-    text-shadow: -1px -1px #000000;
-}
-
-.home-quarterstone p {
-    font-size: 1rem;
-    line-height: 1.5em;
-    margin-top: 1.5em;
-}
-
-/* Account */
-.home-account {
-    display: grid;
-    /* Once again, full width of the grid. */
-    grid-column: 1/5;
-    /* Maximum height, full viewport here.. */
-    grid-row: 5/6;
-    background: linear-gradient(90deg, rgba(45,52,79,1) 50%, rgba(45,52,79,0.85) 55%, rgba(45,52,79,0.75) 60%, rgba(0,212,255,0) 100%), url("../../../static/img/home/block-3.jpg") center right / auto no-repeat #2E2F2A;
-    grid-template-columns: subgrid;
-    min-height: 495px;
-}
-.home-account-text {
-    grid-column: 1/3;
-    margin-top: 7.5em;
-    margin-left: 10em;
-}
-
-.home-account h2 {
-    font-size: 2rem;
-    text-shadow: -1px -1px #000000;
-}
-
-.home-account p {
-    font-size: 1rem;
-    line-height: 1.5em;
-    margin-top: 1.5em;
-}
-
-.home-account a {
-    text-decoration: none;
-    color: #7babd7;
-    font-weight: bold;
-    text-shadow: 0 0 3px #000000;
-}
-
-/* News */
-.home-news {
-    background-color: #CCCCCC;
-    background-image: url("../img/swirl_pattern.png");
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    /* Once again, full width of the grid. */
-    /* Maximum height, full viewport here.. */
-    grid-row: 6/7;
-    /*min-height: 10em;*/
-    grid-column: 1/5;
-}
-
-.home-news-wrapper {
-    margin: 2em 2em 2em 2em;
-    /* Flexbox makes this part easier. */
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.home-news-article {
-    flex: 0 1 calc(25% - 1.5em);
-    background: #ffffff;
-    border: 1px solid #cacaca;
-    overflow: hidden;
-    position: relative;
-}
-
-.home-news-article h2 {
-    color: #282828 !important;
-    text-align: center;
-    font-size: 0.95em;
-    font-weight: bold;
-    line-height: 1.3;
-    margin: 1.25em 1.5em 0.25em 1.5em;
-    border-bottom: 1px dotted #e7e7e7;
-    padding-bottom: 1em;
-}
-
-.home-news-article h3 {
-    font-family: "Open Sans", sans-serif;
-    font-size: 0.80em;
-    font-weight: normal;
-    line-height: 1.3;
-    text-align: center;
-    margin: 1.75em 2em 5em;
-}
-.home-news-article IMG {
-    max-height: 250px;
-    min-height: 250px;
-    object-fit: cover;
-    width: 100%;
-}
-.home-news .meta {
-    text-align: right;
-    border-top: 1px solid #cacaca;
-    background-color: #f3f3f3;
-    font-family: 'Open Sans', serif;
-    font-size: 0.7em;
-    margin-left: -1.5em;
-    position: absolute;
-    bottom: 0px;
-    right: 0px;
-    width: 100%;
-    padding: 0.5em 10px 0.5em 1em;
-}
-
-/*
- * Let's make the homepage responsive.
- */
-
-@media (max-width: 1400px) {
-    .home-oracle-text {
-        margin: 0.75em;
-        padding: 7em;
-        background: rgba(80, 102, 113, 0.8);
+    /* Video on the homepage */
+    .home-video {
+        /* Once again, full width of the grid. */
         grid-column: 1/5;
-        border-radius: 15px;
-    }
-    .home-quarterstone-text {
-        margin: 0.75em;
-        padding: 7em;
-        background: rgb(46, 47, 42, 0.8);
-        border-radius: 15px;
-        grid-column: 1/5;
-    }
-    .home-account-text {
-        margin: 0.75em;
-        padding: 7em;
-        background: rgb(45, 52, 78, 0.8);
-        border-radius: 15px;
-        grid-column: 1/5;
-    }
-    .home-news-article {
-        flex: 0 1 calc(50% - 1.5em);
-        margin: 1em 0em 1em 0em;
-        background: #ffffff;
-        border: 1px solid #cacaca;
-        /*width: 20vw;*/
-        /*min-width: 20em;*/
-        /*max-width: 40em;*/
+        /* Maximum height, full viewport here.. */
+        grid-row: 2/3;
+        height: 100vh;
         overflow: hidden;
-        /*display: flex;*/
-        /*flex-direction: column;*/
-        /*align-items: flex-start;*/
+        position: relative;
+        z-index: 5;
+        margin-top: -150px;
+
+        iframe {
+            top: 0;
+            left: 100%;
+            width: 100vw;
+            height: 110vh;
+            text-align: center;
+            z-index: -555;
+            margin-bottom: -50px;
+        }
+
+        @media (min-aspect-ratio: 16 / 9) {
+            iframe {
+                /* height = 100 * (9 / 16) = 56.25 */
+                height: 56.25vw;
+            }
+        }
+
+        @media (max-aspect-ratio: 16 / 9) {
+            iframe {
+                /* width = 100 / (9 / 16) = 177.777777 */
+                width: 177.78vh;
+            }
+        }
+
+        .home-video-text {
+            margin-top: 10em;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            z-index: 150;
+
+            IMG {
+                max-width: 850px
+            }
+
+            h1 {
+                line-height: 3.125rem;
+                font-size: 3em;
+                text-shadow: 1px 1px #000000;
+                font-weight: 600;
+            }
+
+            h2 {
+                margin-top: 0.25em;
+                text-shadow: 1px 1px rgba(0, 0, 0, 0.600);
+                font-size: 2em;
+            }
+
+            .button {
+                background-color: #3adb76;
+                color: #0a0a0a;
+                border: 1px solid #000000;
+                margin-top: 15px;
+                padding: 10px 15px;
+                font-family: "Open Sans", serif;
+                font-size: 1em;
+                text-decoration: none;
+            }
+        }
+
     }
-    .home-news-wrapper {
-        margin: 2em 1em 2em 1em;
-        /* Flexbox makes this part easier. */
+
+    /* Oracle */
+    .home-oracle {
+        display: grid;
+        /* Once again, full width of the grid. */
+        grid-column: 1/5;
+        /* Maximum height, full viewport here.. */
+        grid-row: 3/4;
+        background: url("../../../static/img/home/block-1.jpg") center right / auto no-repeat #506671;
+        grid-template-columns: subgrid;
+        min-height: 595px;
+
+        .home-oracle-text {
+            grid-column: 1/3;
+            margin-top: 10em;
+            margin-left: 10em;
+        }
+
+        h2 {
+            font-size: 2rem;
+            text-shadow: -1px -1px #000000;
+        }
+
+        p {
+            font-size: 1rem;
+            line-height: 1.5em;
+            margin-top: 1.5em;
+        }
+    }
+
+    /* Quarterstone */
+    .home-quarterstone {
+        display: grid;
+        /* Once again, full width of the grid. */
+        grid-column: 1/5;
+        /* Maximum height, full viewport here.. */
+        grid-row: 4/5;
+        background: url("../../../static/img/home/block-2.jpg") center left / auto no-repeat #2E2F2A;
+        grid-template-columns: subgrid;
+        min-height: 595px;
+
+        .home-quarterstone-text {
+            grid-column: 3/5;
+            margin-top: 10em;
+            margin-right: 10em;
+        }
+
+        h2 {
+            font-size: 2rem;
+            text-shadow: -1px -1px #000000;
+        }
+        p {
+            font-size: 1rem;
+            line-height: 1.5em;
+            margin-top: 1.5em;
+        }
+    }
+
+    /* Account */
+    .home-account {
+        display: grid;
+        /* Once again, full width of the grid. */
+        grid-column: 1/5;
+        /* Maximum height, full viewport here.. */
+        grid-row: 5/6;
+        background: linear-gradient(90deg, rgba(45,52,79,1) 50%, rgba(45,52,79,0.85) 55%, rgba(45,52,79,0.75) 60%, rgba(0,212,255,0) 100%), url("../../../static/img/home/block-3.jpg") center right / auto no-repeat #2E2F2A;
+        grid-template-columns: subgrid;
+        min-height: 495px;
+
+        .home-account-text {
+            grid-column: 1/3;
+            margin-top: 7.5em;
+            margin-left: 10em;
+        }
+
+        h2 {
+            font-size: 2rem;
+            text-shadow: -1px -1px #000000;
+        }
+
+        p {
+            font-size: 1rem;
+            line-height: 1.5em;
+            margin-top: 1.5em;
+        }
+
+        a {
+            text-decoration: none;
+            color: #7babd7;
+            font-weight: bold;
+            text-shadow: 0 0 3px #000000;
+        }
+    }
+
+    .home-news {
+        background-color: #CCCCCC;
+        background-image: url("../img/swirl_pattern.png");
         display: flex;
+        flex-direction: row;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: space-evenly;
+        /* Once again, full width of the grid. */
+        /* Maximum height, full viewport here.. */
+        grid-row: 6/7;
+        /*min-height: 10em;*/
+        grid-column: 1/5;
+
+        .home-news-wrapper {
+            margin: 2em 2em 2em 2em;
+            /* Flexbox makes this part easier. */
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .home-news-article {
+            flex: 0 1 calc(25% - 1.5em);
+            background: #ffffff;
+            border: 1px solid #cacaca;
+            overflow: hidden;
+            position: relative;
+
+            h2 {
+                color: #282828 !important;
+                text-align: center;
+                font-size: 0.95em;
+                font-weight: bold;
+                line-height: 1.3;
+                margin: 1.25em 1.5em 0.25em 1.5em;
+                border-bottom: 1px dotted #e7e7e7;
+                padding-bottom: 1em;
+            }
+
+            h3 {
+                font-family: "Open Sans", sans-serif;
+                font-size: 0.80em;
+                font-weight: normal;
+                line-height: 1.3;
+                text-align: center;
+                margin: 1.75em 2em 5em;
+            }
+            IMG {
+                max-height: 250px;
+                min-height: 250px;
+                object-fit: cover;
+                width: 100%;
+            }
+            .meta {
+                text-align: right;
+                border-top: 1px solid #cacaca;
+                background-color: #f3f3f3;
+                font-family: 'Open Sans', serif;
+                font-size: 0.7em;
+                margin-left: -1.5em;
+                position: absolute;
+                bottom: 0px;
+                right: 0px;
+                width: 100%;
+                padding: 0.5em 10px 0.5em 1em;
+            }
+        }
     }
-    .footer-about {
-        grid-row: 7/8;
-        grid-column: 1/3;
-        max-width: 50vw;
-        font-size: 0.85em;
-        font-weight: normal;
-        font-family: "Open Sans", serif;
+
+    /* Responsive */
+    @media (max-width: 1400px) {
+        .home-oracle-text {
+            margin: 0.75em;
+            padding: 7em;
+            background: rgba(80, 102, 113, 0.8);
+            grid-column: 1/5;
+            border-radius: 15px;
+        }
+        .home-quarterstone-text {
+            margin: 0.75em;
+            padding: 7em;
+            background: rgb(46, 47, 42, 0.8);
+            border-radius: 15px;
+            grid-column: 1/5;
+        }
+        .home-account-text {
+            margin: 0.75em;
+            padding: 7em;
+            background: rgb(45, 52, 78, 0.8);
+            border-radius: 15px;
+            grid-column: 1/5;
+        }
+        .home-news-article {
+            flex: 0 1 calc(50% - 1.5em);
+            margin: 1em 0em 1em 0em;
+            background: #ffffff;
+            border: 1px solid #cacaca;
+            /*width: 20vw;*/
+            /*min-width: 20em;*/
+            /*max-width: 40em;*/
+            overflow: hidden;
+            /*display: flex;*/
+            /*flex-direction: column;*/
+            /*align-items: flex-start;*/
+        }
+        .home-news-wrapper {
+            margin: 2em 1em 2em 1em;
+            /* Flexbox makes this part easier. */
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
     }
-    .footer-social {
-        grid-row: 7/8;
-        grid-column: 3/5;
-        font-weight: normal;
-        font-family: "Open Sans", serif;
+}
+
+/* NAVIGATION */
+/* Our navigation spans the entire width of the grid, no matter how wide it is. */
+nav {
+    /* Grid-column 1/-1 will always span the entirety of the available space. */
+    grid-column: 1/-1;
+    /* Since our navigation bar is always the first row, we start at row 1, end at row 2. So that is one row. */
+    grid-row: 1/2;
+    /* We are using flexbox for this part, since it is best suited for this.  */
+    display: flex;
+    /* Place everything evenly. */
+    justify-content: space-between;
+    background-color: #222;
+    /* The z-index is to make sure we are on top of the video on the home page. */
+    z-index: 50;
+
+    ul {
+        list-style-type: none;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    ul li :hover {
+        background-color: #2a2a2a;
+    }
+
+    li a {
+        display: block;
+        color: white;
+        padding: 14px 16px;
+        text-decoration: none;
     }
 }
 
@@ -386,51 +382,51 @@ nav li a {
     color: #cacaca;
     font-Family: "Merriweather", sans-serif;
     padding: 2em 5em;
-}
-.footer-about {
-    grid-row: 7/8;
-    grid-column: 1/3;
-    max-width: 50vw;
-    font-size: 0.85em;
-    font-weight: normal;
-    font-family: "Open Sans", serif;
-}
-.footer-social {
-    grid-row: 7/8;
-    grid-column: 3/5;
-    font-weight: normal;
-    font-family: "Open Sans", serif;
-}
-.footer ul li a {
-    color: #7babd7;
-    text-decoration: none;
-    margin-left: 1em;
-    line-height: 1.5em;
-    font-size: 0.85em;
-}
-.footer ul {
-    margin-left: 1em;
-}
-.footer h2 {
-    border-bottom: 1px dotted #828282;
-    padding-bottom: 5px;
-    margin-bottom: 1em;
-    border-bottom-width: 0.01em;
-}
-@media (max-width: 1400px) {
     .footer-about {
         grid-row: 7/8;
-        grid-column: 1/5;
-        max-width: 80vw;
+        grid-column: 1/3;
+        max-width: 50vw;
         font-size: 0.85em;
         font-weight: normal;
         font-family: "Open Sans", serif;
-        margin-bottom: 2em;
     }
     .footer-social {
-        grid-row: 8/9;
-        grid-column: 1/5;
+        grid-row: 7/8;
+        grid-column: 3/5;
         font-weight: normal;
         font-family: "Open Sans", serif;
+    }
+    h2 {
+        border-bottom: 1px dotted #828282;
+        padding-bottom: 5px;
+        margin-bottom: 1em;
+        border-bottom-width: 0.01em;
+    }
+    ul {
+        margin-left: 1em;
+    }
+    ul li a {
+        color: #7babd7;
+        text-decoration: none;
+        margin-left: 1em;
+        line-height: 1.5em;
+        font-size: 0.85em;
+    }
+    @media (max-width: 1400px) {
+        .footer-about {
+            grid-row: 7/8;
+            grid-column: 1/5;
+            max-width: 80vw;
+            font-size: 0.85em;
+            font-weight: normal;
+            font-family: "Open Sans", serif;
+            margin-bottom: 2em;
+        }
+        .footer-social {
+            grid-row: 8/9;
+            grid-column: 1/5;
+            font-weight: normal;
+            font-family: "Open Sans", serif;
+        }
     }
 }
