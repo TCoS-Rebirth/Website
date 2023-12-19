@@ -8,7 +8,7 @@ headerimage: "gravesbow_02.png"
 ---
 
 ## Current game server status
-<iframe src="https://monitor.kevinpetit.be/status/spellborn" style="border:0px #ffffff none;" name="myiFrame" scrolling="no" frameborder="0" marginheight="0px" marginwidth="0px" height="800px" width="800px" allowfullscreen></iframe>
+<iframe src="https://monitor.kevinpetit.be/status/spellborn" style="border:0px #ffffff none;" name="myiFrame" scrolling="no" frameborder="0" marginheight="0px" marginwidth="0px" height="1000px" width="800px" allowfullscreen></iframe>
 
 ## Is the game down?
 We get notified automatically, but feel free to join our Discord - maybe you'll find some more information there.

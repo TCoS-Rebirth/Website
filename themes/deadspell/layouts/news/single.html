@@ -1,0 +1,33 @@
+{{ partial "header.html" . }}
+<div class="container" id="post">
+	{{ partial "nav.html" . }}
+
+	<div class="hero">
+		<img src="{{ .Site.BaseURL }}/img/headers/{{ .Params.headerimage }}" alt="{{ .Title }}" />
+	</div>
+	<div class="hero-text">
+		<p class="postdate">Posted on {{ .Date.Format "Monday, 2 January 2006" }} by {{ .Params.Author }}</p>
+		<h1>{{ .Title }}</h1>
+		<h2>{{ .Params.leadtext }}</h2>
+		{{ with .Params.tags }}
+		<div class="labels">
+			{{ range . }}
+				<span><a href="{{ "tags" | absURL }}/{{ . | urlize }}">{{ . }}</span></a>
+			{{ end }}
+		</div>
+		{{ end }}
+	</div>
+
+	<div class="post-page">
+		<div class="post-wrapper">
+			{{ .Content }}
+		</div>
+	</div>
+
+	{{ partial "footer.html" . }}
+</div>
+{{ block "scripts" . }}
+<!-- Allows to load scripts on the end of the page -->
+{{ end }}
+</body>
+</html>

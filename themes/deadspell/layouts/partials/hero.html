@@ -1,0 +1,10 @@
+{{ "<!-- BEGIN HERO PANEL -->" | safeHTML }}
+<div class="hero">
+	<img src="{{ .Site.BaseURL }}img/hero/hero4.jpg" alt="News" />
+</div>
+<div class="hero-text">
+	<h1>{{ .Title }}</h1>
+	<h2>{{ .Params.leadtext }}</h2>
+</div>
+
+{{ "<!-- END HERO PANEL -->" | safeHTML }}

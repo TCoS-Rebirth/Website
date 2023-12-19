@@ -1,0 +1,9 @@
+{{ "<!-- BEGIN MAIN CONTENT -->" | safeHTML }}
+<div class="post-page">
+	<div class="post-wrapper">
+		<h1>{{ .Site.Params.main.contentOneTitle }}</h1>
+		<p>{{ .Site.Params.main.contentOneBody | markdownify }}</p>
+		<h1>{{ .Site.Params.main.contentTwoTitle }}</h1>
+		<p>{{ .Site.Params.main.contentTwoBody | markdownify }}</p>
+	</div>
+</div> {{ "<!-- END MAIN CONTENT -->" | safeHTML }}

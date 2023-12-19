@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The Chronicles of Spellborn</title>
+    <link rel="stylesheet" href="static/css/sheet.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="container" id="post">
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li class="hide-for-small"><a href="#">News</a></li>
+            <li class="hide-for-small"><a href="#">Forum</a></li>
+            <li><a href="#">Donate</a></li>
+            <li class="hide-for-small"><a href="#">High Houses</a></li>
+            <li class="hide-for-small"><a href="#">Get Started</a></li>
+            <li><a href="#">Server Status</a></li>
+        </ul>
+    </nav>
+
+    <div class="hero">
+        <img src="../static/img/headers/viola.jpg" alt="Server move finished + introducing new account system." />
+    </div>
+    <div class="hero-text">
+        <p class="postdate">Posted on Thursday, 6 July 2023</p>
+        <h1>Getting started</h1>
+        <h2>And we're live.</h2>
+        <div class="labels">
+            <span>new server</span>
+            <span>future</span>
+            <span>account</span>
+        </div>
+    </div>
+
+
+    <div class="post-page">
+        <div class="post-wrapper">
+            <p>Hello there!</p>
+            <p>The migration to the new game server has been completed and the game is back online on a brand new (and much more powerful) machine.
+                This entire endeavour has been centered around allowing The Chronicles of Spellborn to run for many more years by modernizing the software that the server itself runs upon. This entire project ran for many months and required a lot of work, but in the end we’re glad to say that the game should run fine on this new generation of software.</p>
+            <p>With our focus on modernizing the server, we also turned our eye to the current account registration system which was a bit… barebone, to say the least. In essence, this was a debug page that we dug up and re-used for our signup page, but it came with quite a lot of drawbacks - the only unique information stored was the username and password, which made it impossible to implement a password reset feature.
+                So, quite early on in this process the decision was made to build a custom account system that would wrap around the existing game systems, a “master account” to bind all of your existing and new accounts to. Let’s go a bit more in depth.</p>
+           <div class="marking green">
+                <h1 id="creating-a-new-account">Creating a new account</h1>
+                <p>In order to create a new game account, you will need to register a new account on <a href="https://account.spellborn.org">https://account.spellborn.org</a>. This is a completely seperate system from both the forums, our Discord and the previous accounts and it is your new master account.
+                    This master account can not be used to login to the game with, but can be used to create new game accounts or used to link your existing game accounts to your master account. This has the advantage that you can reset the password of both old and new accounts.</p>
+                <p>The new Account system is also way more secure, as passwords are stored quite a lot more securely, and enables you to reset your password should you forget it.</p>
+                <p>In order to create a new game account, you’ll need to create an account on the Spellborn Account system. Once that is done, you’ll be able to create a new game account from this website. You can also access the Spellborn Account system from within the launcher by clicking on <strong>Create Account</strong>.</p>
+           </div>
+            <h1 id="claiming-your-existing-game-accounts">Claiming your existing game accounts</h1>
+            <p>Since there is no information stored that we can use to link your existing accounts, we have built a system where you can log in to your existing accounts and claim this to your Spellborn Account. An account link is permanent and each game account can only be linked to a single Spellborn Account.
+                In order to link your account, you’ll need to login to the Spellborn Account system and choose (in the top bar) <strong>Link existing account</strong> or go to <a href="https://account.spellborn.org/game/claim">https://account.spellborn.org/game/claim</a>.</p>
+            <p>From this page you can link your existing account. Should you get an error, or in the case that you no longer know the password of your original account, feel free to contact us on <a href="mailto:help@spellborn.org">help@spellborn.org</a> or in the Discord-server.</p>
+            <h1 id="monitoring-update">Monitoring update</h1>
+            <p>A short while ago, we introduced a Status page on the website, this has now been integrated into the launcher so you can see if the game server is online/offline or down for maintenance.</p>
+            <h1 id="bugs">Bugs</h1>
+            <p>Ofcourse this is a huge change for both the game as well as us (with the account system), so bugs are to be expected. Should you encounter a bug, feel free to report this on the Discord and we’ll glady take a look at it.</p>
+            <p>From the entire Spellborn team, we thank you all for your support and what lies hidden, must still be found.</p>
+            <ul>
+                <li>Kevin</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="footer-about">
+            <h2>About The Chronicles of Spellborn</h2>
+            <p><strong>The Chronicles of Spellborn</strong> is a defunct MMORPG developed by Spellborn NV in the Netherlands. Originally released in 2008, it had a slow and painful death.</p>
+            <p>Problems with publishers, an unclear vision for the future and being released in the midst of the MMORPG-boom, it had all odds against it.</p>
+            <p>For many years, a team of motivated fans tried to get the game up and running again, which succeeded in 2019. The game is now playable again, with more content and fixes than ever, and this all for free.</p>
+            <p>This is fan-driven project for the love of this truly unique game and we hope you will like the game as much as we do.</p>
+        </div>
+        <div class="footer-social">
+            <h2>Handy links</h2>
+            <ul>
+                <li><a href="https://forum.spellborn.org">Forums</a></li>
+                <li><a href="https://discord.gg/M8u7AsG">Discord</a></li>
+                <li><a href="https://account.spellborn.org">Manage Spellborn account</a></li>
+                <li><a href="https://files.spellborn.org/launcher/installer.exe">Download launcher</a></li>
+                <li><a href="https://donorbox.org/spellborn-reborn">Donate</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>

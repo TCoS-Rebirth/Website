@@ -1,7 +1,7 @@
 baseURL = "https://spellborn.org/"
 languageCode = "en-us"
 title = "The Chronicles of Spellborn - Reborn"
-theme = "hawksmouth"
+theme = "deadspell"
 
 [menu]
 

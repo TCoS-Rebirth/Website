@@ -1,0 +1,12 @@
+# theme.toml template for a Hugo theme
+name = "deadspell"
+license = "MIT"
+description = "Deadspell"
+homepage = "https://ke.vinpet.it"
+tags = ["deadspell", "spellborn"]
+features = ["hugo", "mobile"]
+min_version = 0.17
+
+[author]
+  name = "Kevin Petit"
+  homepage = "https://ke.vinpet.it"

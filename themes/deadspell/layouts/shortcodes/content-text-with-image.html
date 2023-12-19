@@ -1,0 +1,13 @@
+{{ $number := (int (.Get "col")) }}
+{{ $colwidth := (sub 12 $number) }}
+
+<section class="container content-block content-text-with-image">
+    <div class="row align-items-center">
+        <div class="col-md-{{ .Get "col" }} order-md-{{ .Get "position" }}">
+          <img class="img-fluid" src="/img/content/{{ .Get "img" }}" />
+        </div>
+        <div class="col-md-{{ $colwidth }}">
+          {{ .Inner }}
+        </div>
+    </div>
+</section>

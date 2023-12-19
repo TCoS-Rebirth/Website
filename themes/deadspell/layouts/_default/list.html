@@ -1,0 +1,31 @@
+{{ partial "header.html" . }}
+<div class="container" id="news">
+    {{ partial "nav.html" . }}
+    {{ partial "hero.html" . }}
+
+    <div class="news-page">
+        <div class="news-wrapper">
+            {{ range .Data.Pages }}
+            <div class="news-article">
+                <a href="{{.Permalink}}"><img src="/img/headers/{{ .Params.headerimage }}" alt="{{.Title}}" /></a>
+                <h2><a href="{{.Permalink}}">{{.Title}}</a></h2>
+                <h3>{{.Description}}</h3>
+                <div class="meta">
+                    <div class="author">
+                        by {{ .Params.Author }} on {{ .Date.Format "Monday, 2 January 2006" }}
+                    </div>
+                </div>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+
+    {{ partial "footer.html" . }}
+</div>
+{{ block "scripts" . }}
+<!-- Allows to load scripts on the end of the page -->
+{{ end }}
+
+
+</body>
+</html>
