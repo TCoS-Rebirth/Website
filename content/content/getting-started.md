@@ -14,16 +14,7 @@ Follow these steps to jump into the game.
 ## Download the game client
 Before you can start and play, you will need to download our launcher which will download the game and keep it up-to-date.
 
-We currently offer 2 versions of our launcher: our full (recommended) launcher which gives you the full experience, or a more minimal (CLI) version of the launcher which is recommended for users with bandwith limits or slower internet, as this version supports resuming of downloads.
-
-<a class="button" href="https://files.spellborn.org/launcher/launcher-installer.exe" title="Download launcher (recommended)" target="_blank">Download launcher</a>
-<a class="button secondary" href="https://files.spellborn.org/launcher/launcher-minimal.exe" title="Download minimal launcher" target="_blank">Download minimal launcher</a>
-<div class="marking red">
-<strong>Warning: the full launcher currently does not support resuming downloads, so keep in mind that once you start the launcher, it will download about 5 GB.</strong>
-<strong>The minimal launcher does support resuming downloads and is recommend for slower connections.</strong>
-
-The minimal launcher does not offer an installer, but is available for many operating systems (including Mac OS and Linux). Keep in mind that the game itself only runs on Windows. The minimal launcher is open source (https://github.com/TCoS-Rebirth/Launcher-Minimal/releases).
-</div>
+<a class="button" href="https://files.spellborn.org/SpellbornSetup.exe" title="Download launcher" target="_blank">Download game</a>
 
 ## Create a Spellborn Account and create your game account
 To play The Chronicles of Spellborn, you need to have a master account called a Spellborn Account.    
